@@ -6,3 +6,7 @@ class ImageTableViewCell: UITableViewCell {
         imageView?.image = viewData.image
     }
 }
+
+extension ImageTableViewCell: Updatable {
+    typealias ViewData = ImageCellViewData
+}

@@ -7,3 +7,7 @@ class NoteTableViewCell: UITableViewCell {
         textLabel?.text = viewData.title
     }
 }
+
+extension NoteTableViewCell: Updatable {
+    typealias ViewData = NoteCellViewData
+}

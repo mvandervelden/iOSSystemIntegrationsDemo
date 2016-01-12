@@ -4,15 +4,38 @@ import UIKit
 let noteCellIdentifier = "NoteTableViewCell"
 let imageCellIdentifier = "ImageTableViewCell"
 
+protocol CellConfiguratorType {
+    var reuseIdentifier: String { get }
+    var cellClass: AnyClass { get }
+    
+    func updateCell(cell: UITableViewCell)
+}
+
+struct CellConfigurator<Cell where Cell: Updatable, Cell: UITableViewCell> {
+    
+    let viewData: Cell.ViewData
+    let reuseIdentifier: String = NSStringFromClass(Cell)
+    let cellClass: AnyClass = Cell.self
+    
+    func updateCell(cell: UITableViewCell) {
+        if let cell = cell as? Cell {
+            cell.updateWithViewData(viewData)
+        }
+    }
+}
+
+extension CellConfigurator: CellConfiguratorType {
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [Any] = [
-        NoteCellViewData(title: "Foo"),
-        ImageCellViewData(image: UIImage(named: "apple")!),
-        ImageCellViewData(image: UIImage(named: "google")!),
-        NoteCellViewData(title: "Bar"),
+    let items : [CellConfiguratorType] = [
+        CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title: "Foo")),
+        CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image: UIImage(named: "apple")!)),
+        CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image: UIImage(named: "google")!)),
+        CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title: "Bar")),
     ]
     
     override func viewDidLoad() {
@@ -23,8 +46,9 @@ class ViewController: UIViewController {
     }
     
     func registerCells() {
-        tableView.registerClass(NoteTableViewCell.self, forCellReuseIdentifier: noteCellIdentifier)
-        tableView.registerClass(ImageTableViewCell.self, forCellReuseIdentifier: imageCellIdentifier)
+        for cellConfigurator in items {
+            tableView.registerClass(cellConfigurator.cellClass, forCellReuseIdentifier: cellConfigurator.reuseIdentifier)
+        }
     }
 }
 
@@ -35,18 +59,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let viewData = items[indexPath.row]
-        
-        if (viewData is NoteCellViewData) {
-            let cell = tableView.dequeueReusableCellWithIdentifier(noteCellIdentifier) as! NoteTableViewCell
-            cell.updateWithViewData(viewData as! NoteCellViewData)
-            return cell
-        } else if (viewData is ImageCellViewData) {
-            let cell = tableView.dequeueReusableCellWithIdentifier(imageCellIdentifier) as! ImageTableViewCell
-            cell.updateWithViewData(viewData as! ImageCellViewData)
-            return cell
-        }
-        
-        fatalError()
+        let cellConfigurator = items[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellConfigurator.reuseIdentifier, forIndexPath: indexPath)
+        cellConfigurator.updateCell(cell)
+        return cell
     }
 }

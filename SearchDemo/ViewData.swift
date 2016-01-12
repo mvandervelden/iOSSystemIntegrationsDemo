@@ -8,3 +8,14 @@ struct NoteCellViewData {
 struct ImageCellViewData {
     let image: UIImage
 }
+
+enum TableViewItem {
+    case Note(viewData: NoteCellViewData)
+    case Image(viewData: ImageCellViewData)
+}
+
+protocol Updatable: class {
+    typealias ViewData
+    
+    func updateWithViewData(viewData: ViewData)
+}
