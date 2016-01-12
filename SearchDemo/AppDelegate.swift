@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  SearchDemo
-//
-//  Created by maarten.van.der.velden@philips.com on 11/01/16.
-//  Copyright © 2016 Philips. All rights reserved.
-//
 
 import UIKit
 import CoreData
