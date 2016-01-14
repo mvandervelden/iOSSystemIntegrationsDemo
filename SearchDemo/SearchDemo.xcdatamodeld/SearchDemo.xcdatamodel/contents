@@ -11,13 +11,13 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Note" representedClassName=".Note" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-209" positionY="9" width="128" height="88"/>
-        <element name="Image" positionX="-56" positionY="-108" width="128" height="88"/>
         <element name="Contact" positionX="-209" positionY="-108" width="128" height="88"/>
+        <element name="Image" positionX="-56" positionY="-108" width="128" height="88"/>
+        <element name="Note" positionX="-209" positionY="9" width="128" height="88"/>
     </elements>
 </model>

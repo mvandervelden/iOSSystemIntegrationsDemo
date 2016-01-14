@@ -31,23 +31,27 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items : [CellConfiguratorType] = [
-        CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title: "Foo")),
-        CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image: UIImage(named: "apple")!)),
-        CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image: UIImage(named: "google")!)),
-        CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title: "Bar")),
-    ]
+    var items : [CellConfiguratorType] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
+        updateItems()
         registerCells()
     }
     
+    @IBAction func refresh() {
+        updateItems()
+    }
     func registerCells() {
         for cellConfigurator in items {
             tableView.registerClass(cellConfigurator.cellClass, forCellReuseIdentifier: cellConfigurator.reuseIdentifier)
+        }
+    }
+    
+    func updateItems() {
+        for note in Storage.notes() {
+            items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
         }
     }
 }
