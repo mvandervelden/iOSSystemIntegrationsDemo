@@ -17,8 +17,15 @@
 		0CF852EA1C439402007CB94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF852E91C439402007CB94D /* Assets.xcassets */; };
 		0CF852ED1C439403007CB94D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF852EB1C439403007CB94D /* LaunchScreen.storyboard */; };
 		0CF852F81C439403007CB94D /* SearchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF852F71C439403007CB94D /* SearchDemoTests.swift */; };
+		0CFA50011C4570B2004067EE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA50001C4570B2004067EE /* Storage.swift */; };
 		4EE70A43ADD0C0F15AFDFAC3 /* Pods_SearchDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC5DD0542A0A30DBB149941 /* Pods_SearchDemo.framework */; };
 		F87C02BD1C470D850079D7A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C02BC1C470D850079D7A7 /* DetailViewController.swift */; };
+		7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */; };
+		7149F5D916974ED305F14C00 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8C3E74E3E33F3B379AC /* Image.swift */; };
+		7149F6C1362FCDA8A3062384 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7DE2EC93576F8329A03 /* Note.swift */; };
+		7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */; };
+		7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */; };
+		7149FB4D710732083E9B836B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7B56EDCA22F17B15A4B /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		0CF852F31C439403007CB94D /* SearchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF852F71C439403007CB94D /* SearchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDemoTests.swift; sourceTree = "<group>"; };
 		0CF852F91C439403007CB94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CFA50001C4570B2004067EE /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = SearchDemo/DataModel/Storage.swift; sourceTree = "<group>"; };
+		7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "SearchDemo/DataModel/Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7149F7B56EDCA22F17B15A4B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = SearchDemo/DataModel/Contact.swift; sourceTree = "<group>"; };
+		7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "SearchDemo/DataModel/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7149F7DE2EC93576F8329A03 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = SearchDemo/DataModel/Note.swift; sourceTree = "<group>"; };
+		7149F8C3E74E3E33F3B379AC /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = SearchDemo/DataModel/Image.swift; sourceTree = "<group>"; };
+		7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Contact+CoreDataProperties.swift"; path = "SearchDemo/DataModel/Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9888C46E28E383BB2D6A204F /* Pods-SearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemo/Pods-SearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9CC5DD0542A0A30DBB149941 /* Pods_SearchDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87C02BC1C470D850079D7A7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +108,7 @@
 		0CF852DE1C439402007CB94D /* SearchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0CFA4FFF1C456FE2004067EE /* DataModel */,
 				0CF852DF1C439402007CB94D /* AppDelegate.swift */,
 				0CF852E11C439402007CB94D /* ViewController.swift */,
 				0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */,
@@ -104,7 +119,6 @@
 				0CF852EB1C439403007CB94D /* LaunchScreen.storyboard */,
 				0CF852E91C439402007CB94D /* Assets.xcassets */,
 				0CF852EE1C439403007CB94D /* Info.plist */,
-				0CF852E61C439402007CB94D /* SearchDemo.xcdatamodeld */,
 			);
 			path = SearchDemo;
 			sourceTree = "<group>";
@@ -116,6 +130,22 @@
 				0CF852F91C439403007CB94D /* Info.plist */,
 			);
 			path = SearchDemoTests;
+			sourceTree = "<group>";
+		};
+		0CFA4FFF1C456FE2004067EE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CF852E61C439402007CB94D /* SearchDemo.xcdatamodeld */,
+				7149F7B56EDCA22F17B15A4B /* Contact.swift */,
+				7149F8C3E74E3E33F3B379AC /* Image.swift */,
+				7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */,
+				7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */,
+				7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */,
+				7149F7DE2EC93576F8329A03 /* Note.swift */,
+				0CFA50001C4570B2004067EE /* Storage.swift */,
+			);
+			name = DataModel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F66B63C98462E6A6F42D8267 /* Frameworks */ = {
@@ -294,6 +324,13 @@
 				0C5E12981C44E75200D0366E /* ViewData.swift in Sources */,
 				0CF852E01C439402007CB94D /* AppDelegate.swift in Sources */,
 				F87C02BD1C470D850079D7A7 /* DetailViewController.swift in Sources */,
+				0CFA50011C4570B2004067EE /* Storage.swift in Sources */,
+				7149FB4D710732083E9B836B /* Contact.swift in Sources */,
+				7149F5D916974ED305F14C00 /* Image.swift in Sources */,
+				7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */,
+				7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */,
+				7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */,
+				7149F6C1362FCDA8A3062384 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +544,8 @@
 				0CF852E71C439402007CB94D /* SearchDemo.xcdatamodel */,
 			);
 			currentVersion = 0CF852E71C439402007CB94D /* SearchDemo.xcdatamodel */;
-			path = SearchDemo.xcdatamodeld;
+			name = SearchDemo.xcdatamodeld;
+			path = SearchDemo/SearchDemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
