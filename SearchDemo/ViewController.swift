@@ -45,6 +45,20 @@ class ViewController: UIViewController {
         registerCells()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "showDetail" {
+            if let destination = segue.destinationViewController as? DetailViewController {
+                
+                if let cellConfigurator = items[(tableView.indexPathForSelectedRow?.row)!] as? CellConfigurator<NoteTableViewCell> {
+                    destination.note = cellConfigurator.viewData.title
+                }
+                else if let cellConfigurator = items[(tableView.indexPathForSelectedRow?.row)!] as? CellConfigurator<ImageTableViewCell>  {
+                    destination.image = cellConfigurator.viewData.image
+                }
+            }
+        }
+    }
+    
     func registerCells() {
         for cellConfigurator in items {
             tableView.registerClass(cellConfigurator.cellClass, forCellReuseIdentifier: cellConfigurator.reuseIdentifier)
@@ -63,5 +77,12 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellConfigurator.reuseIdentifier, forIndexPath: indexPath)
         cellConfigurator.updateCell(cell)
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showDetail", sender: self)
     }
 }
