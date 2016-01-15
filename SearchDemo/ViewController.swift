@@ -61,6 +61,8 @@ class ViewController: UIViewController {
         
     @IBAction func refresh(refreshControl: UIRefreshControl) {
         updateItems()
+        registerCells()
+        tableView.reloadData()
         refreshControl.endRefreshing()
     }
     
@@ -71,9 +73,32 @@ class ViewController: UIViewController {
     }
     
     func updateItems() {
+        items.removeAll()
         for note in Storage.notes() {
             items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
         }
+        
+        for image in Storage.images() {
+            downloadImage(NSURL(string: image.url!)!)
+        }
+    }
+    
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL){
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:UIImage(data: data)!)))
+                self.registerCells()
+                self.tableView.reloadData()
+            }
+        }
+
     }
 }
 
