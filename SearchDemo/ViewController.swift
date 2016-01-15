@@ -36,6 +36,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
+        
         updateItems()
         registerCells()
     }
@@ -54,8 +59,9 @@ class ViewController: UIViewController {
         }
     }
         
-    @IBAction func refresh() {
+    @IBAction func refresh(refreshControl: UIRefreshControl) {
         updateItems()
+        refreshControl.endRefreshing()
     }
     
     func registerCells() {

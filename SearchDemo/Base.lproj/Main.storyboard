@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qb5-gr-frf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qb5-gr-frf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,25 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-fy-lPL">
-                                <rect key="frame" x="1" y="20" width="600" height="506"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-fy-lPL">
+                                <rect key="frame" x="1" y="64" width="600" height="506"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrN-5v-xUE">
-                                        <rect key="frame" x="0.0" y="0.0" width="53" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Lgl-sy-H7V"/>
-                                        </constraints>
-                                        <state key="normal" title="Refresh"/>
-                                        <connections>
-                                            <action selector="refresh" destination="BYZ-38-t0r" eventType="touchUpInside" id="up2-HV-mEe"/>
-                                        </connections>
-                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vyD-fM-gwF">
-                                        <rect key="frame" x="0.0" y="30" width="600" height="476"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="506"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoteTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" id="sLC-34-iuQ" customClass="NoteTableViewCell" customModule="SearchDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sLC-34-iuQ" id="BL7-o3-5l6">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -43,7 +33,7 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ImageTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" id="6JX-fa-Gh6" customClass="ImageTableViewCell" customModule="SearchDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6JX-fa-Gh6" id="3pt-UK-a2t">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
