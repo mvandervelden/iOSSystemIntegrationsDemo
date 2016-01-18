@@ -2,6 +2,7 @@
 import UIKit
 import CoreData
 import MagicalRecord
+import CoreSpotlight
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
+        
+        if userActivity.activityType == CSSearchableItemActionType {
+            return true
+        }
+        
+        let navigationController = self.window?.rootViewController as! UINavigationController
+        navigationController.topViewController?.restoreUserActivityState(userActivity)
+        return true
     }
     
     // MARK: - Core Data stack

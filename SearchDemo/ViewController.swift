@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var items : [CellConfiguratorType] = []
+    var itemToRestore: AnyObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,41 @@ class ViewController: UIViewController {
         if segue.identifier == "showDetail" {
             if let destination = segue.destinationViewController as? DetailViewController {
                 
-                if let cellConfigurator = items[(tableView.indexPathForSelectedRow?.row)!] as? CellConfigurator<NoteTableViewCell> {
-                    destination.note = cellConfigurator.viewData.title
+                if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
+                
+                    if let cellConfigurator = items[selectedRow] as? CellConfigurator<NoteTableViewCell> {
+                        destination.note = cellConfigurator.viewData.title
+                    }
+                    else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
+                        destination.image = cellConfigurator.viewData.image
+                    }
                 }
-                else if let cellConfigurator = items[(tableView.indexPathForSelectedRow?.row)!] as? CellConfigurator<ImageTableViewCell>  {
-                    destination.image = cellConfigurator.viewData.image
+                else if let item = self.itemToRestore {
+                    if item is NSString {
+                        destination.note = item as? String
+                    }
+                    else if item is UIImage {
+                        destination.image = item as? UIImage
+                    }
+                    
                 }
             }
+        }
+    }
+    
+    override func restoreUserActivityState(activity: NSUserActivity) {
+        
+        //TODO: itemToRestore should be of class Note, Image or Contact
+        if let type = activity.userInfo?["type"] {
+            if type.isEqualToString("note") {
+                self.itemToRestore = (activity.userInfo?["name"])!
+            }
+            else if type.isEqualToString("image"){
+                let imageData = activity.userInfo?["data"] as! NSData
+                self.itemToRestore = UIImage(data: imageData)!
+            }
+            
+            self.performSegueWithIdentifier("showDetail", sender: self)
         }
     }
         
