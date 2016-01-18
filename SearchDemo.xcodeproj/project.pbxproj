@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C57EDE61C491051009D3DA1 /* SpotlightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57EDE51C491051009D3DA1 /* SpotlightHelper.swift */; };
 		0C5E12961C44E72700D0366E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */; };
 		0C5E12981C44E75200D0366E /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12971C44E75200D0366E /* ViewData.swift */; };
 		0C5E129A1C44E79800D0366E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12991C44E79800D0366E /* ImageTableViewCell.swift */; };
@@ -19,13 +20,13 @@
 		0CF852F81C439403007CB94D /* SearchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF852F71C439403007CB94D /* SearchDemoTests.swift */; };
 		0CFA50011C4570B2004067EE /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA50001C4570B2004067EE /* Storage.swift */; };
 		4EE70A43ADD0C0F15AFDFAC3 /* Pods_SearchDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC5DD0542A0A30DBB149941 /* Pods_SearchDemo.framework */; };
-		F87C02BD1C470D850079D7A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C02BC1C470D850079D7A7 /* DetailViewController.swift */; };
 		7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */; };
 		7149F5D916974ED305F14C00 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8C3E74E3E33F3B379AC /* Image.swift */; };
 		7149F6C1362FCDA8A3062384 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7DE2EC93576F8329A03 /* Note.swift */; };
 		7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */; };
 		7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */; };
 		7149FB4D710732083E9B836B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7B56EDCA22F17B15A4B /* Contact.swift */; };
+		F87C02BD1C470D850079D7A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C02BC1C470D850079D7A7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		08BAEBB352F249708B0FFC13 /* Pods-SearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemo/Pods-SearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0C57EDE51C491051009D3DA1 /* SpotlightHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotlightHelper.swift; sourceTree = "<group>"; };
 		0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		0C5E12971C44E75200D0366E /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		0C5E12991C44E79800D0366E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				0CF852E11C439402007CB94D /* ViewController.swift */,
 				0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */,
 				0C5E12991C44E79800D0366E /* ImageTableViewCell.swift */,
+				0C57EDE51C491051009D3DA1 /* SpotlightHelper.swift */,
 				0C5E12971C44E75200D0366E /* ViewData.swift */,
 				F87C02BC1C470D850079D7A7 /* DetailViewController.swift */,
 				0CF852E31C439402007CB94D /* Main.storyboard */,
@@ -330,6 +333,7 @@
 				7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */,
 				7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */,
 				7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */,
+				0C57EDE61C491051009D3DA1 /* SpotlightHelper.swift in Sources */,
 				7149F6C1362FCDA8A3062384 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,11 +464,13 @@
 			baseConfigurationReference = 9888C46E28E383BB2D6A204F /* Pods-SearchDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SearchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -473,6 +479,7 @@
 			baseConfigurationReference = 08BAEBB352F249708B0FFC13 /* Pods-SearchDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SearchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

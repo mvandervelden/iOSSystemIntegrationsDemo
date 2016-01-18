@@ -1,8 +1,14 @@
-
+    
 import Foundation
 import MagicalRecord
 
 class Storage {
+    class func allItems() -> [Indexable] {
+        let noteList : [Indexable] = notes()
+        let imageList : [Indexable] = images()
+        return noteList + imageList
+    }
+    
     class func createContacts() {
         let contact = Contact.MR_createEntity()
         contact.name = "John Doe"

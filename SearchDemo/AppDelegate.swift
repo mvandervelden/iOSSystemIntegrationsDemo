@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !Storage.hasImages() {
             Storage.createImages()
         }
+        SpotlightHelper.indexAllRecords()
         return true
     }
     

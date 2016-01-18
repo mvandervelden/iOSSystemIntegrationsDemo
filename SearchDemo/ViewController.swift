@@ -74,12 +74,13 @@ class ViewController: UIViewController {
     
     func updateItems() {
         items.removeAll()
-        for note in Storage.notes() {
-            items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
-        }
-        
-        for image in Storage.images() {
-            downloadImage(NSURL(string: image.url!)!)
+        for item in Storage.allItems() {
+            if let note = item as? Note {
+                items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
+            }
+            if let image = item as? Image {
+                downloadImage(NSURL(string: image.url!)!)
+            }
         }
     }
     
