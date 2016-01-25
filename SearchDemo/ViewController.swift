@@ -87,6 +87,11 @@ class ViewController: UIViewController {
             self.performSegueWithIdentifier("showDetail", sender: self)
         }
     }
+    
+    func restoreItem(item: AnyObject) {
+        self.itemToRestore = item
+        self.performSegueWithIdentifier("showDetail", sender: self)
+    }
         
     @IBAction func refresh(refreshControl: UIRefreshControl) {
         updateItems()

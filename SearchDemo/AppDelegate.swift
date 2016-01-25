@@ -36,8 +36,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let navigationController = self.window?.rootViewController as! UINavigationController
-        navigationController.topViewController?.restoreUserActivityState(userActivity)
-        return true
+        
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            if let paths = userActivity.webpageURL!.pathComponents {
+                if paths.count > 1 && paths[1] == "notes" {
+                    let topVC = navigationController.topViewController as! ViewController
+                    topVC.restoreItem(paths[2])
+                    return true
+                }
+            }
+        }
+        
+        if userActivity.activityType == "com.philips.pins.SearchDemo" {
+            navigationController.topViewController?.restoreUserActivityState(userActivity)
+            return true
+        }
+        
+        return false
     }
     
     // MARK: - Core Data stack

@@ -20,10 +20,12 @@ class DetailViewController: UIViewController {
             noteLabel.hidden = false
             
             detailUserActivity = NSUserActivity(activityType: "com.philips.pins.SearchDemo")
+            detailUserActivity.webpageURL = NSURL(string: "https://tmp.ask-cs.nl/notes/" + note.lowercaseString + "/")
             detailUserActivity.userInfo = ["name": note, "type": "note"]
             detailUserActivity.title = note
             detailUserActivity.eligibleForHandoff = true;
             detailUserActivity.eligibleForSearch = true;
+            detailUserActivity.requiredUserInfoKeys = NSSet(array: ["name", "type"]) as! Set<String>;
             
             let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
             attributeSet.title = note
