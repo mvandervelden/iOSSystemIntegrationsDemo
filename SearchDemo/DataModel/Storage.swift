@@ -17,25 +17,13 @@ class Storage {
     }
     
     class func createNotes() {
-        let note = Note.MR_createEntity()
-        note.text = "Foo"
-        note.timestamp = NSDate()
-        note.id = NSUUID().UUIDString
-        let note2 = Note.MR_createEntity()
-        note2.text = "Bar"
-        note2.timestamp = NSDate()
-        note2.id = NSUUID().UUIDString
+        Note.create(NSDate(), text: "Foo")
+        Note.create(NSDate(), text: "Bar")
     }
     
     class func createImages() {
-        let image1 = Image.MR_createEntity()
-        image1.timestamp = NSDate()
-        image1.title = "apple"
-        image1.url = "http://logok.org/wp-content/uploads/2014/04/Apple-Logo-rainbow.png"
-        let image2 = Image.MR_createEntity()
-        image2.timestamp = NSDate()
-        image2.title = "google"
-        image2.url = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+        Image.create(NSDate(), title: "Apple", url:"http://logok.org/wp-content/uploads/2014/04/Apple-Logo-rainbow.png")
+        Image.create(NSDate(), title: "Google", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png")
     }
     
     class func hasContacts() -> Bool {

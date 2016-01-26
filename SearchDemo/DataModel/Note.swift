@@ -6,8 +6,14 @@ import MobileCoreServices
 
 class Note: NSManagedObject{
     
-    // Insert code here to add functionality to your managed object subclass
-    
+    class func create(timestamp:NSDate, text:String) -> Note {
+        let note = Note.MR_createEntity()
+        note.timestamp = timestamp
+        note.text = text
+        note.id = NSUUID().UUIDString
+        note.index()
+        return note
+    }
 }
 
 extension Note : Indexable {
