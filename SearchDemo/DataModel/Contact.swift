@@ -1,7 +1,7 @@
 
 import Foundation
 import CoreData
-
+import CoreSpotlight
 
 class Contact: NSManagedObject {
     
@@ -11,5 +11,9 @@ class Contact: NSManagedObject {
 extension Contact : Indexable {
     func index() {
         
+    }
+    
+    func attributes() -> CSSearchableItemAttributeSet {
+        return CSSearchableItemAttributeSet()
     }
 }

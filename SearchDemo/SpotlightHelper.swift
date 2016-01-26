@@ -1,5 +1,6 @@
 
 import Foundation
+import CoreSpotlight
 
 class SpotlightHelper {
     class func indexAllRecords() {
@@ -12,4 +13,5 @@ class SpotlightHelper {
 
 @objc protocol Indexable: class {
     func index()
+    func attributes() -> CSSearchableItemAttributeSet
 }

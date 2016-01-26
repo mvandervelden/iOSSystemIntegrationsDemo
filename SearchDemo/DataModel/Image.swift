@@ -49,27 +49,7 @@ extension Image : Downloadable {
 extension Image : Indexable {
     func index() {
         downloadImage() {image in
-            let attributes = CSSearchableItemAttributeSet(itemContentType:kUTTypeItem as String)
-            attributes.title = image.title
-            let formatter = NSDateFormatter()
-            formatter.timeStyle = .ShortStyle
-            if let date = image.timestamp {
-                attributes.contentDescription = formatter.stringFromDate(date)
-            }
-            var keywords = ["image"]
-            if let title = image.title {
-                keywords.append(title)
-            }
-            attributes.keywords = keywords
-            if let urlString = image.url, let webUrl = NSURL(string:urlString) {
-                attributes.thumbnailURL = webUrl
-            }
-
-            if let uiImage = image.image {
-                attributes.thumbnailData = UIImagePNGRepresentation(uiImage)
-            }
-
-            let item = CSSearchableItem(uniqueIdentifier: image.url, domainIdentifier: "com.philips.pins.SearchDemo.image", attributeSet: attributes)
+            let item = CSSearchableItem(uniqueIdentifier: image.url, domainIdentifier: "com.philips.pins.SearchDemo.image", attributeSet: self.attributes())
             item.expirationDate = NSDate().dateByAddingTimeInterval(60*10)
             CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error) -> Void in
                 if (error != nil) {
@@ -77,5 +57,28 @@ extension Image : Indexable {
                 }
             }
         }
+    }
+    
+    func attributes() -> CSSearchableItemAttributeSet {
+        let attributes = CSSearchableItemAttributeSet(itemContentType:kUTTypeItem as String)
+        attributes.title = title
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .ShortStyle
+        if let date = timestamp {
+            attributes.contentDescription = formatter.stringFromDate(date)
+        }
+        var keywords = ["image"]
+        if let title = title {
+            keywords.append(title)
+        }
+        attributes.keywords = keywords
+        if let urlString = url, let webUrl = NSURL(string:urlString) {
+            attributes.thumbnailURL = webUrl
+        }
+        
+        if let uiImage = image {
+            attributes.thumbnailData = UIImagePNGRepresentation(uiImage)
+        }
+        return attributes
     }
 }
