@@ -10,10 +10,7 @@ class Storage {
     }
     
     class func createContacts() {
-        let contact = Contact.MR_createEntity()
-        contact.name = "John Doe"
-        contact.phone = "+31 6 12 34 56 78"
-        contact.email = "john.doe@johndoe.com"
+        Contact.create("John Doe", phone:"+31 6 12 34 56 78", email:"john.doe@johndoe.com")
     }
     
     class func createNotes() {

@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !Storage.hasImages() {
             Storage.createImages()
         }
+        if !Storage.hasContacts() {
+            Storage.createContacts()
+        }
         return true
     }
     
