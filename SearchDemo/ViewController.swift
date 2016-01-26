@@ -43,30 +43,33 @@ class ViewController: UIViewController {
         tableView.addSubview(refreshControl)
         
         updateItems()
+        refreshScreen()
+    }
+    
+    func refreshScreen() {
         registerCells()
+        tableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "showDetail" {
-            if let destination = segue.destinationViewController as? DetailViewController {
-                
-                if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
-                
-                    if let cellConfigurator = items[selectedRow] as? CellConfigurator<NoteTableViewCell> {
-                        destination.note = cellConfigurator.viewData.title
-                    }
-                    else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
-                        destination.image = cellConfigurator.viewData.image
-                    }
+        if let destination = segue.destinationViewController as? DetailViewController
+            where segue.identifier == "showDetail" {
+            
+            if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
+            
+                if let cellConfigurator = items[selectedRow] as? CellConfigurator<NoteTableViewCell> {
+                    destination.note = cellConfigurator.viewData.title
                 }
-                else if let item = self.itemToRestore {
-                    if item is NSString {
-                        destination.note = item as? String
-                    }
-                    else if item is UIImage {
-                        destination.image = item as? UIImage
-                    }
-                    
+                else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
+                    destination.image = cellConfigurator.viewData.image
+                }
+            }
+            else if let item = self.itemToRestore {
+                if item is NSString {
+                    destination.note = item as? String
+                }
+                else if item is UIImage {
+                    destination.image = item as? UIImage
                 }
             }
         }
@@ -95,8 +98,7 @@ class ViewController: UIViewController {
         
     @IBAction func refresh(refreshControl: UIRefreshControl) {
         updateItems()
-        registerCells()
-        tableView.reloadData()
+        refreshScreen()
         refreshControl.endRefreshing()
     }
     
@@ -124,8 +126,7 @@ class ViewController: UIViewController {
                 if let uiImage = image.image {
                     dispatch_async(dispatch_get_main_queue()) { () -> Void in
                         self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:uiImage)))
-                        self.registerCells()
-                        self.tableView.reloadData()
+                        self.refreshScreen()
                 }
             }
         }
