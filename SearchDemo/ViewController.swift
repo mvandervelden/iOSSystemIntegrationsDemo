@@ -113,24 +113,20 @@ class ViewController: UIViewController {
                 items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
             }
             if let image = item as? Image {
-                downloadImage(NSURL(string: image.url!)!)
+                downloadImage(image)
             }
         }
     }
     
-    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
-        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
-            completion(data: data, response: response, error: error)
-            }.resume()
-    }
     
-    func downloadImage(url: NSURL){
-        getDataFromUrl(url) { (data, response, error)  in
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                guard let data = data where error == nil else { return }
-                self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:UIImage(data: data)!)))
-                self.registerCells()
-                self.tableView.reloadData()
+    func downloadImage(image : Image){
+        image.downloadImage { (image) -> Void in
+                if let uiImage = image.image {
+                    dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                        self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:uiImage)))
+                        self.registerCells()
+                        self.tableView.reloadData()
+                }
             }
         }
     }
