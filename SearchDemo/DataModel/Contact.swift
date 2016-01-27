@@ -34,8 +34,10 @@ extension Contact : Indexable {
         }
         
         if let phone = phone {
-            attributes.phoneNumbers = [phone]
+            attributes.phoneNumbers = [phone, "(888) 555-5521"]
+            attributes.supportsPhoneCall = 1
         }
+        attributes.contentDescription = phone! + "\n" + email!
         attributes.keywords = ["contact"]
         return attributes
     }
