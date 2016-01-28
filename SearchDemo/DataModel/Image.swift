@@ -1,4 +1,3 @@
-
 import Foundation
 import UIKit
 import CoreData
@@ -6,13 +5,13 @@ import CoreSpotlight
 import MobileCoreServices
 
 protocol Downloadable {
-    func downloadImage(completion:(image:Image) -> Void)
+    func downloadImage(completion: (image:Image) -> Void)
 }
 
 class Image: NSManagedObject {
-    var image : UIImage?
-    
-    class func create(timestamp:NSDate, title:String, url:String) -> Image {
+    var image: UIImage?
+
+    class func create(timestamp: NSDate, title: String, url: String) -> Image {
         let image = Image.MR_createEntity()
         image.timestamp = timestamp
         image.title = title
@@ -22,45 +21,51 @@ class Image: NSManagedObject {
     }
 }
 
-extension Image : Downloadable {
-    
-    func downloadImage(completion: (image:Image) -> Void){
+extension Image: Downloadable {
+    func downloadImage(completion: (image:Image) -> Void) {
         if (image != nil) {
-            completion(image:self)
+            completion(image: self)
         }
-        getData() { (data, response, error)  in
-            dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                guard let data = data where error == nil else { return }
+        getData() {
+            (data, response, error) in
+            dispatch_async(dispatch_get_main_queue()) {
+                () -> Void in
+                guard let data = data where error == nil else {
+                    return
+                }
                 self.image = UIImage(data: data)
                 completion(image: self)
             }
         }
     }
-    
-    func getData(completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
-        if let urlString = url, let webUrl = NSURL(string:urlString) {
-            NSURLSession.sharedSession().dataTaskWithURL(webUrl) { (data, response, error) in
+
+    func getData(completion: ((data:NSData?, response:NSURLResponse?, error:NSError?) -> Void)) {
+        if let urlString = url, let webUrl = NSURL(string: urlString) {
+            NSURLSession.sharedSession().dataTaskWithURL(webUrl) {
+                (data, response, error) in
                 completion(data: data, response: response, error: error)
-                }.resume()
+            }.resume()
         }
     }
 }
 
-extension Image : Indexable {
+extension Image: Indexable {
     func index() {
-        downloadImage() {image in
+        downloadImage() {
+            image in
             let item = CSSearchableItem(uniqueIdentifier: image.url, domainIdentifier: "com.philips.pins.SearchDemo.image", attributeSet: self.attributes())
-            item.expirationDate = NSDate().dateByAddingTimeInterval(60*10)
-            CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error) -> Void in
+            item.expirationDate = NSDate().dateByAddingTimeInterval(60 * 10)
+            CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) {
+                (error) -> Void in
                 if (error != nil) {
                     print(error?.localizedDescription)
                 }
             }
         }
     }
-    
+
     func attributes() -> CSSearchableItemAttributeSet {
-        let attributes = CSSearchableItemAttributeSet(itemContentType:kUTTypeItem as String)
+        let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
         attributes.title = title
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
@@ -72,10 +77,10 @@ extension Image : Indexable {
             keywords.append(title)
         }
         attributes.keywords = keywords
-        if let urlString = url, let webUrl = NSURL(string:urlString) {
+        if let urlString = url, let webUrl = NSURL(string: urlString) {
             attributes.thumbnailURL = webUrl
         }
-        
+
         if let uiImage = image {
             attributes.thumbnailData = UIImagePNGRepresentation(uiImage)
         }
