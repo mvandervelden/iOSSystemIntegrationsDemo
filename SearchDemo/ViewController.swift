@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var items : [CellConfiguratorType] = []
-    var itemToRestore: AnyObject?
+    var itemToRestore: Indexable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,40 +58,36 @@ class ViewController: UIViewController {
             if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
             
                 if let cellConfigurator = items[selectedRow] as? CellConfigurator<NoteTableViewCell> {
-                    destination.note = cellConfigurator.viewData.title
-                }
-                else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
+                    destination.note = cellConfigurator.viewData.note
+                } else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
                     destination.image = cellConfigurator.viewData.image
                 }
             }
             else if let item = self.itemToRestore {
-                if item is NSString {
-                    destination.note = item as? String
-                }
-                else if item is UIImage {
-                    destination.image = item as? UIImage
+                if item is Note {
+                    destination.note = item as? Note
+                } else if item is Image {
+                    destination.image = item as? Image
                 }
             }
         }
     }
     
     override func restoreUserActivityState(activity: NSUserActivity) {
-        
-        //TODO: itemToRestore should be of class Note, Image or Contact
         if let type = activity.userInfo?["type"] {
             if type.isEqualToString("note") {
-                self.itemToRestore = (activity.userInfo?["name"])!
-            }
-            else if type.isEqualToString("image"){
-                let imageData = activity.userInfo?["data"] as! NSData
-                self.itemToRestore = UIImage(data: imageData)!
+                let note = Storage.getNoteByText(activity.userInfo?["name"] as! String)
+                self.itemToRestore = note
+            } else if type.isEqualToString("image"){
+                let url = activity.userInfo?["id"] as! String
+                self.itemToRestore = Storage.getImageByURL(url)
             }
             
             self.performSegueWithIdentifier("showDetail", sender: self)
         }
     }
     
-    func restoreItem(item: AnyObject) {
+    func restoreItem(item: Indexable) {
         self.itemToRestore = item
         self.performSegueWithIdentifier("showDetail", sender: self)
     }
@@ -112,7 +108,7 @@ class ViewController: UIViewController {
         items.removeAll()
         for item in Storage.allItems() {
             if let note = item as? Note {
-                items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(title:note.text!)))
+                items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(note:note)))
             }
             if let image = item as? Image {
                 downloadImage(image)
@@ -123,11 +119,9 @@ class ViewController: UIViewController {
     
     func downloadImage(image : Image){
         image.downloadImage { (image) -> Void in
-                if let uiImage = image.image {
-                    dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                        self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:uiImage)))
-                        self.refreshScreen()
-                }
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                self.items.append(CellConfigurator<ImageTableViewCell>(viewData: ImageCellViewData(image:image)))
+                self.refreshScreen()
             }
         }
     }

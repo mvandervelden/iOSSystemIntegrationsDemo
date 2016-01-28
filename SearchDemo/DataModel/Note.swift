@@ -18,7 +18,6 @@ class Note: NSManagedObject{
 
 extension Note : Indexable {
     func index() {
-
         let item = CSSearchableItem(uniqueIdentifier: id, domainIdentifier: "com.philips.pins.SearchDemo.note", attributeSet: attributes())
         item.expirationDate = NSDate().dateByAddingTimeInterval(60*10)
         CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error) -> Void in

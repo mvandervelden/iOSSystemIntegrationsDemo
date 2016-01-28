@@ -4,7 +4,7 @@ import UIKit
 class NoteTableViewCell: UITableViewCell {
     
     func updateWithViewData(viewData: NoteCellViewData) {
-        textLabel?.text = viewData.title
+        textLabel?.text = viewData.note.text
     }
 }
 

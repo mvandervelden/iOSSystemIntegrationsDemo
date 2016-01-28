@@ -41,10 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             if let paths = userActivity.webpageURL!.pathComponents {
-                if paths.count > 1 && paths[1] == "notes" {
-                    let topVC = navigationController.topViewController as! ViewController
-                    topVC.restoreItem(paths[2])
-                    return true
+                if paths.count > 1 {
+                    if paths[1] == "notes" {
+                        let topVC = navigationController.topViewController as! ViewController
+                        let text = Storage.getNoteByText(paths[2])
+                        topVC.restoreItem(text)
+                        return true
+                    }
                 }
             }
         }

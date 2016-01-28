@@ -2,11 +2,11 @@
 import UIKit
 
 struct NoteCellViewData {
-    let title: String
+    let note: Note
 }
 
 struct ImageCellViewData {
-    let image: UIImage
+    let image: Image
 }
 
 enum TableViewItem {
