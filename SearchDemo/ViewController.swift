@@ -1,5 +1,6 @@
 
 import UIKit
+import CoreSpotlight
 
 let noteCellIdentifier = "NoteTableViewCell"
 let imageCellIdentifier = "ImageTableViewCell"
@@ -70,6 +71,8 @@ class ViewController: UIViewController {
                     destination.note = item as? Note
                 } else if item is Image {
                     destination.image = item as? Image
+                } else if item is Contact {
+                    destination.contact = item as? Contact
                 }
             }
         }
@@ -86,6 +89,20 @@ class ViewController: UIViewController {
             } else if type.isEqualToString("contact"){
                 let email = activity.userInfo?["id"] as! String
                 self.itemToRestore = Storage.getContactByEmail(email)
+            }
+            
+            self.performSegueWithIdentifier("showDetail", sender: self)
+        }
+    }
+    
+    func restoreCoreSpotlight(activity: NSUserActivity) {
+        if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String{
+            if let note = Storage.getNoteById(id) {
+                itemToRestore = note
+            } else if let image = Storage.getImageByURL(id) {
+                itemToRestore = image
+            } else if let contact = Storage.getContactByEmail(id) {
+                self.itemToRestore = contact
             }
             
             self.performSegueWithIdentifier("showDetail", sender: self)

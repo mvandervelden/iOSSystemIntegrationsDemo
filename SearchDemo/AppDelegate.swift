@@ -32,11 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
-        
-        if userActivity.activityType == CSSearchableItemActionType {
-            return true
-        }
-        
         let navigationController = self.window?.rootViewController as! UINavigationController
         
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
@@ -44,8 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if paths.count > 1 {
                     if paths[1] == "notes" {
                         let topVC = navigationController.topViewController as! ViewController
-                        let text = Storage.getNoteByText(paths[2])
-                        topVC.restoreItem(text)
+                        if let text = Storage.getNoteByText(paths[2]) {
+                            topVC.restoreItem(text)
+                        }
                         return true
                     }
                 }
@@ -54,6 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if userActivity.activityType == "com.philips.pins.SearchDemo" {
             navigationController.topViewController?.restoreUserActivityState(userActivity)
+            return true
+        }
+        
+        if userActivity.activityType == CSSearchableItemActionType {
+            if let topVC = navigationController.topViewController as? ViewController {
+                topVC.restoreCoreSpotlight(userActivity)
+            }
             return true
         }
         
