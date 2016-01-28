@@ -151,5 +151,6 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showDetail", sender: self)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
