@@ -42,4 +42,15 @@ class Storage {
     class func images() -> [Image] {
         return Image.MR_findAll() as! [Image]
     }
+    class func getNoteByText(text : String) -> Note {
+        return Note.MR_findFirstByAttribute("text", withValue: text) as Note
+    }
+    
+    class func getImageByURL(url : String) -> Image {
+        return Image.MR_findFirstByAttribute("url", withValue: url) as Image
+    }
+    
+    class func getContactByEmail(email : String) -> Contact {
+        return Contact.MR_findFirstByAttribute("email", withValue: email) as Contact
+    }
 }
