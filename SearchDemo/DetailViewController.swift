@@ -10,6 +10,7 @@ class DetailViewController: UIViewController {
     var note: Note?
     var image: Image?
     var contact: Contact?
+    var detailUserActivity: NSUserActivity!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +19,9 @@ class DetailViewController: UIViewController {
             noteLabel.text = note.text
             noteLabel.hidden = false
 
-            userActivity = note.activity()
+            detailUserActivity = note.activity()
             
-            userActivity!.becomeCurrent()
+            detailUserActivity.becomeCurrent()
         }
 
         if let image = image {
@@ -30,16 +31,16 @@ class DetailViewController: UIViewController {
             imageTitleLabel.text = image.title!
             imageTitleLabel.hidden = false
 
-            userActivity = image.activity()
-            userActivity!.becomeCurrent()
+            detailUserActivity = image.activity()
+            detailUserActivity.becomeCurrent()
         }
 
         if let contact = contact {
             noteLabel.text = contact.name! + "\n" + contact.phone!
             noteLabel.hidden = false
 
-            userActivity = contact.activity()
-            userActivity!.becomeCurrent()
+            detailUserActivity = contact.activity()
+            detailUserActivity.becomeCurrent()
         }
     }
 }
