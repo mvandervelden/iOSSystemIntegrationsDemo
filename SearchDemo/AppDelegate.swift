@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, continueUserActivity userActivity: NSUserActivity, restorationHandler: ([AnyObject]?) -> Void) -> Bool {
         let navigationController = self.window?.rootViewController as! UINavigationController
-
+        navigationController.popToRootViewControllerAnimated(false)
+        
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             return userActivity.restoreFromWeb(navigationController)
         }
@@ -89,21 +90,19 @@ extension NSUserActivity {
             return false
         }
         
-        navigationController.popToRootViewControllerAnimated(false)
-        
-        var itemToRestore: Indexable!
+        var itemToRestore: Indexable?
         if paths[1] == "notes" {
-            itemToRestore = Storage.getNoteByText(paths[2])
+            itemToRestore = Storage.getNoteByText(paths[2].capitalizedString)
         }
             
         else if paths[1] == ("images"){
             itemToRestore = Image.MR_findFirstByAttribute("title", withValue: paths[2].capitalizedString) as Image
         }
         
-        topVC.restoreItem(itemToRestore)
-        return true
-        
-        
+        if let item = itemToRestore {
+            topVC.restoreItem(item)
+            return true
+        }
         return false
     }
     
