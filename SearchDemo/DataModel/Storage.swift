@@ -2,6 +2,19 @@ import Foundation
 import MagicalRecord
 
 class Storage {
+    class func prepare() {
+        MagicalRecord.setupCoreDataStack()
+        if !Storage.hasNotes() {
+            Storage.createNotes()
+        }
+        if !Storage.hasImages() {
+            Storage.createImages()
+        }
+        if !Storage.hasContacts() {
+            Storage.createContacts()
+        }
+    }
+
     class func allItems() -> [Indexable] {
         let noteList: [Indexable] = notes()
         let imageList: [Indexable] = images()

@@ -9,16 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
-        MagicalRecord.setupCoreDataStack()
-        if !Storage.hasNotes() {
-            Storage.createNotes()
-        }
-        if !Storage.hasImages() {
-            Storage.createImages()
-        }
-        if !Storage.hasContacts() {
-            Storage.createContacts()
-        }
+        Storage.prepare()
         return true
     }
 
@@ -30,31 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = self.window?.rootViewController as! UINavigationController
 
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
-            if let paths = userActivity.webpageURL!.pathComponents {
-                if paths.count > 1 {
-                    if paths[1] == "notes" {
-                        let topVC = navigationController.topViewController as! ViewController
-                        if let text = Storage.getNoteByText(paths[2]) {
-                            topVC.restoreItem(text)
-                        }
-                        return true
-                    }
-                }
-            }
+            return userActivity.restoreFromWeb(navigationController)
         }
 
         if userActivity.activityType == "com.philips.pins.SearchDemo" {
-            navigationController.topViewController?.restoreUserActivityState(userActivity)
-            return true
+            return userActivity.restoreFromActivity(navigationController)
         }
 
         if userActivity.activityType == CSSearchableItemActionType {
-            if let topVC = navigationController.topViewController as? ViewController {
-                topVC.restoreCoreSpotlight(userActivity)
-            }
-            return true
+            return userActivity.restoreFromSpotlight(navigationController)
         }
-
         return false
     }
 
@@ -99,6 +75,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if managedObjectContext.hasChanges {
             managedObjectContext.MR_saveToPersistentStoreAndWait()
         }
+    }
+}
+
+extension NSUserActivity {
+    func restoreFromWeb(navigationController:UINavigationController) -> Bool {
+        guard let paths = webpageURL!.pathComponents
+            where paths.count > 1 && paths[1] == "notes"
+            else {
+                return false
+        }
+        guard let topVC = navigationController.topViewController as? ViewController else {
+            return false
+        }
+        if let text = Storage.getNoteByText(paths[2]) {
+            topVC.restoreItem(text)
+            return true
+        }
+        return false
+    }
+    
+    func restoreFromActivity(navigationController:UINavigationController) -> Bool {
+        navigationController.topViewController?.restoreUserActivityState(self)
+        return true
+    }
+    
+    func restoreFromSpotlight(navigationController:UINavigationController) -> Bool {
+        if let topVC = navigationController.topViewController as? ViewController {
+            topVC.restoreCoreSpotlight(self)
+        }
+        return true
     }
 }
 
