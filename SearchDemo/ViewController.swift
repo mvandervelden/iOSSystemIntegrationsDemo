@@ -74,42 +74,6 @@ class ViewController: UIViewController {
         }
     }
 
-    override func restoreUserActivityState(activity: NSUserActivity) {
-        if let type = activity.userInfo?["type"] {
-            if type.isEqualToString("note") {
-                let note = Storage.getNoteByText(activity.userInfo?["name"] as! String)
-                self.itemToRestore = note
-            } else if type.isEqualToString("image") {
-                let url = activity.userInfo?["id"] as! String
-                self.itemToRestore = Storage.getImageByURL(url)
-            } else if type.isEqualToString("contact") {
-                let email = activity.userInfo?["id"] as! String
-                self.itemToRestore = Storage.getContactByEmail(email)
-            }
-
-            self.performSegueWithIdentifier("showDetail", sender: self)
-        }
-    }
-
-    func restoreCoreSpotlight(activity: NSUserActivity) {
-        if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
-            if let note = Storage.getNoteById(id) {
-                itemToRestore = note
-            } else if let image = Storage.getImageByURL(id) {
-                itemToRestore = image
-            } else if let contact = Storage.getContactByEmail(id) {
-                self.itemToRestore = contact
-            }
-
-            self.performSegueWithIdentifier("showDetail", sender: self)
-        }
-    }
-
-    func restoreItem(item: Indexable) {
-        self.itemToRestore = item
-        self.performSegueWithIdentifier("showDetail", sender: self)
-    }
-
     @IBAction func refresh(refreshControl: UIRefreshControl) {
         updateItems()
         refreshScreen()
@@ -166,5 +130,66 @@ extension ViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showDetail", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+}
+
+extension ViewController : ActivityRestorator {
+    func restoreFromWeb(activity:NSUserActivity) -> Bool {
+        guard let paths = activity.webpageURL!.pathComponents
+            where paths.count > 1
+            else {
+                return false
+        }
+        if paths[1] == "notes", let text = Storage.getNoteByText(paths[2].capitalizedString) {
+            restoreItem(text)
+            return true
+        } else if paths[1] == "images", let image = Storage.getImageByTitle(paths[2].capitalizedString) {
+            restoreItem(image)
+            return true
+        }
+        return false
+    }
+    
+    func restoreItem(item: Indexable) {
+        self.itemToRestore = item
+        self.performSegueWithIdentifier("showDetail", sender: self)
+    }
+    
+    func restoreFromActivity(activity:NSUserActivity) -> Bool {
+        restoreUserActivityState(activity)
+        return true
+    }
+    
+    override func restoreUserActivityState(activity: NSUserActivity) {
+        if let type = activity.userInfo?["type"] {
+            if type.isEqualToString("note") {
+                let note = Storage.getNoteByText(activity.userInfo?["name"] as! String)
+                self.itemToRestore = note
+            } else if type.isEqualToString("image") {
+                let url = activity.userInfo?["id"] as! String
+                self.itemToRestore = Storage.getImageByURL(url)
+            } else if type.isEqualToString("contact") {
+                let email = activity.userInfo?["id"] as! String
+                self.itemToRestore = Storage.getContactByEmail(email)
+            }
+            
+            self.performSegueWithIdentifier("showDetail", sender: self)
+        }
+    }
+    
+    func restoreFromSpotlight(activity:NSUserActivity) -> Bool {
+        if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+            if let note = Storage.getNoteById(id) {
+                itemToRestore = note
+            } else if let image = Storage.getImageByURL(id) {
+                itemToRestore = image
+            } else if let contact = Storage.getContactByEmail(id) {
+                self.itemToRestore = contact
+            }
+            
+            self.performSegueWithIdentifier("showDetail", sender: self)
+            return true
+        }
+        return false
     }
 }

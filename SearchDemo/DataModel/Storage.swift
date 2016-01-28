@@ -71,6 +71,10 @@ class Storage {
     class func getImageByURL(url: String) -> Image? {
         return Image.MR_findFirstByAttribute("url", withValue: url)
     }
+    
+    class func getImageByTitle(title: String) -> Image? {
+        return Image.MR_findFirstByAttribute("title", withValue: title)
+    }
 
     class func getContactByEmail(email: String) -> Contact? {
         return Contact.MR_findFirstByAttribute("email", withValue: email)
