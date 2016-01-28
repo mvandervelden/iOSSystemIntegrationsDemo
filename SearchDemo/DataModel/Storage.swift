@@ -6,7 +6,8 @@ class Storage {
     class func allItems() -> [Indexable] {
         let noteList : [Indexable] = notes()
         let imageList : [Indexable] = images()
-        return noteList + imageList
+        let contactList : [Indexable] = contacts()
+        return noteList + imageList + contactList
     }
     
     class func createContacts() {
@@ -42,6 +43,11 @@ class Storage {
     class func images() -> [Image] {
         return Image.MR_findAll() as! [Image]
     }
+    
+    class func contacts() -> [Contact] {
+        return Contact.MR_findAll() as! [Contact]
+    }
+    
     class func getNoteByText(text : String) -> Note {
         return Note.MR_findFirstByAttribute("text", withValue: text) as Note
     }

@@ -61,6 +61,8 @@ class ViewController: UIViewController {
                     destination.note = cellConfigurator.viewData.note
                 } else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell>  {
                     destination.image = cellConfigurator.viewData.image
+                } else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ContactTableViewCell>  {
+                    destination.contact = cellConfigurator.viewData.contact
                 }
             }
             else if let item = self.itemToRestore {
@@ -81,6 +83,9 @@ class ViewController: UIViewController {
             } else if type.isEqualToString("image"){
                 let url = activity.userInfo?["id"] as! String
                 self.itemToRestore = Storage.getImageByURL(url)
+            } else if type.isEqualToString("contact"){
+                let email = activity.userInfo?["id"] as! String
+                self.itemToRestore = Storage.getContactByEmail(email)
             }
             
             self.performSegueWithIdentifier("showDetail", sender: self)
@@ -112,6 +117,9 @@ class ViewController: UIViewController {
             }
             if let image = item as? Image {
                 downloadImage(image)
+            }
+            if let contact = item as? Contact {
+                items.append(CellConfigurator<ContactTableViewCell>(viewData: ContactCellViewData(contact:contact)))
             }
         }
     }
