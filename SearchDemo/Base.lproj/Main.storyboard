@@ -124,18 +124,31 @@
                                     <constraint firstAttribute="height" constant="200" id="tTc-2M-SDN"/>
                                 </constraints>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXr-4W-pE4">
+                                <rect key="frame" x="150" y="130" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ohk-rB-sXK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dgQ-tZ-mW3" firstAttribute="centerX" secondItem="wkR-jU-WMg" secondAttribute="centerX" id="0Jh-c3-2WM"/>
+                            <constraint firstItem="dgQ-tZ-mW3" firstAttribute="top" secondItem="OXr-4W-pE4" secondAttribute="bottom" constant="30" id="4mt-3b-X3J"/>
+                            <constraint firstItem="dgQ-tZ-mW3" firstAttribute="width" secondItem="OXr-4W-pE4" secondAttribute="width" id="6V6-DM-dT0"/>
                             <constraint firstItem="rwP-Q9-mMb" firstAttribute="centerY" secondItem="wkR-jU-WMg" secondAttribute="centerY" id="cjq-L5-KKu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rwP-Q9-mMb" secondAttribute="trailing" constant="10" id="doV-7O-1QB"/>
+                            <constraint firstItem="OXr-4W-pE4" firstAttribute="centerX" secondItem="wkR-jU-WMg" secondAttribute="centerX" id="llN-xP-aev"/>
                             <constraint firstItem="rwP-Q9-mMb" firstAttribute="leading" secondItem="wkR-jU-WMg" secondAttribute="leadingMargin" constant="10" id="x3P-z2-jQA"/>
                             <constraint firstItem="dgQ-tZ-mW3" firstAttribute="centerY" secondItem="wkR-jU-WMg" secondAttribute="centerY" id="yG3-v2-dBo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="xm8-oP-rnP"/>
                     <connections>
+                        <outlet property="imageTitleLabel" destination="OXr-4W-pE4" id="HaP-AO-IZ7"/>
                         <outlet property="imageView" destination="dgQ-tZ-mW3" id="RAK-Rd-QTa"/>
                         <outlet property="noteLabel" destination="rwP-Q9-mMb" id="oML-mr-VZW"/>
                     </connections>

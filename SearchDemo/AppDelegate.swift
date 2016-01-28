@@ -81,17 +81,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension NSUserActivity {
     func restoreFromWeb(navigationController:UINavigationController) -> Bool {
         guard let paths = webpageURL!.pathComponents
-            where paths.count > 1 && paths[1] == "notes"
+            where paths.count > 1
             else {
                 return false
         }
         guard let topVC = navigationController.topViewController as? ViewController else {
             return false
         }
-        if let text = Storage.getNoteByText(paths[2]) {
-            topVC.restoreItem(text)
-            return true
+        
+        navigationController.popToRootViewControllerAnimated(false)
+        
+        var itemToRestore: Indexable!
+        if paths[1] == "notes" {
+            itemToRestore = Storage.getNoteByText(paths[2])
         }
+            
+        else if paths[1] == ("images"){
+            itemToRestore = Image.MR_findFirstByAttribute("title", withValue: paths[2].capitalizedString) as Image
+        }
+        
+        topVC.restoreItem(itemToRestore)
+        return true
+        
+        
         return false
     }
     
