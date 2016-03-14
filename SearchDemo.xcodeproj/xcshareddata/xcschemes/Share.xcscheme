@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0CF852F21C439403007CB94D"
+               BuildableName = "SearchDemoTests.xctest"
+               BlueprintName = "SearchDemoTests"
+               ReferencedContainer = "container:SearchDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C8435DE1C915841001C6141"
-            BuildableName = "Share.appex"
-            BlueprintName = "Share"
+            BlueprintIdentifier = "0CF852DB1C439402007CB94D"
+            BuildableName = "SearchDemo.app"
+            BlueprintName = "SearchDemo"
             ReferencedContainer = "container:SearchDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
