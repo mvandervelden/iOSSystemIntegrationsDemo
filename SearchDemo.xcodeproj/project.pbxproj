@@ -102,6 +102,7 @@
 		0C8435E41C915841001C6141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		0C8435E61C915841001C6141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8F4E941C59356F004ADF27 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		0CE51E161C9AD12A00C937FF /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Share.entitlements; sourceTree = "<group>"; };
 		0CE51E171C9B509E00C937FF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0CE51E191C9BD69C00C937FF /* DataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataFactory.swift; path = SearchDemo/DataModel/DataFactory.swift; sourceTree = "<group>"; };
 		0CF852DC1C439402007CB94D /* SearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +173,7 @@
 		0C8435E01C915841001C6141 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				0CE51E161C9AD12A00C937FF /* Share.entitlements */,
 				0C8435E11C915841001C6141 /* ShareViewController.swift */,
 				0C8435E31C915841001C6141 /* MainInterface.storyboard */,
 				0C8435E61C915841001C6141 /* Info.plist */,
@@ -375,11 +377,19 @@
 					0C8435DE1C915841001C6141 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = CS7SZ6KGXK;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0CF852DB1C439402007CB94D = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = CS7SZ6KGXK;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
@@ -667,12 +677,14 @@
 		0C8435EA1C915842001C6141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -680,12 +692,14 @@
 		0C8435EB1C915842001C6141 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo.Share;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.Share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -786,7 +800,7 @@
 				INFOPLIST_FILE = SearchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -806,7 +820,7 @@
 				INFOPLIST_FILE = SearchDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
