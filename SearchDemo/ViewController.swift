@@ -32,6 +32,10 @@ class ViewController: UIViewController {
     var items: [CellConfiguratorType] = []
     var itemToRestore: Indexable?
 
+    lazy var storage : Storage = {
+       return Storage()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -88,7 +92,7 @@ class ViewController: UIViewController {
 
     func updateItems() {
         items.removeAll()
-        for item in Storage.allItems() {
+        for item in storage.allItems() {
             if let note = item as? Note {
                 items.append(CellConfigurator<NoteTableViewCell>(viewData: NoteCellViewData(note: note)))
             }
@@ -140,10 +144,10 @@ extension ViewController : ActivityRestorator {
             else {
                 return false
         }
-        if paths[1] == "notes", let text = Storage.getNoteByText(paths[2].capitalizedString) {
+        if paths[1] == "notes", let text = storage.getNoteByText(paths[2].capitalizedString) {
             restoreItem(text)
             return true
-        } else if paths[1] == "images", let image = Storage.getImageByTitle(paths[2].capitalizedString) {
+        } else if paths[1] == "images", let image = storage.getImageByTitle(paths[2].capitalizedString) {
             restoreItem(image)
             return true
         }
@@ -163,14 +167,14 @@ extension ViewController : ActivityRestorator {
     override func restoreUserActivityState(activity: NSUserActivity) {
         if let type = activity.userInfo?["type"] {
             if type.isEqualToString("note") {
-                let note = Storage.getNoteByText(activity.userInfo?["name"] as! String)
+                let note = storage.getNoteByText(activity.userInfo?["name"] as! String)
                 self.itemToRestore = note
             } else if type.isEqualToString("image") {
                 let url = activity.userInfo?["id"] as! String
-                self.itemToRestore = Storage.getImageByURL(url)
+                self.itemToRestore = storage.getImageByURL(url)
             } else if type.isEqualToString("contact") {
                 let email = activity.userInfo?["id"] as! String
-                self.itemToRestore = Storage.getContactByEmail(email)
+                self.itemToRestore = storage.getContactByEmail(email)
             }
             
             self.performSegueWithIdentifier("showDetail", sender: self)
@@ -179,11 +183,11 @@ extension ViewController : ActivityRestorator {
     
     func restoreFromSpotlight(activity:NSUserActivity) -> Bool {
         if let id = activity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
-            if let note = Storage.getNoteById(id) {
+            if let note = storage.getNoteById(id) {
                 itemToRestore = note
-            } else if let image = Storage.getImageByURL(id) {
+            } else if let image = storage.getImageByURL(id) {
                 itemToRestore = image
-            } else if let contact = Storage.getContactByEmail(id) {
+            } else if let contact = storage.getContactByEmail(id) {
                 self.itemToRestore = contact
             }
             

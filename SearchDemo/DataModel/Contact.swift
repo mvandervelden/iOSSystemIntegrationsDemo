@@ -4,14 +4,6 @@ import CoreSpotlight
 import MobileCoreServices
 
 class Contact: NSManagedObject {
-    class func create(name: String, phone: String, email: String) -> Contact {
-        let contact = Contact.MR_createEntity()
-        contact.name = name
-        contact.phone = phone
-        contact.email = email
-        contact.index()
-        return contact
-    }
 }
 
 extension Contact: Indexable {

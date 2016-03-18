@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-SearchDemo/MagicalRecord.framework"
+  install_framework "Pods-SearchDemo/CocoaLumberjack.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-SearchDemo/MagicalRecord.framework"
+  install_framework "Pods-SearchDemo/CocoaLumberjack.framework"
 fi

@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 import CoreData
 import CoreSpotlight
@@ -10,15 +9,6 @@ protocol Downloadable {
 
 class Image: NSManagedObject {
     var image: UIImage?
-
-    class func create(timestamp: NSDate, title: String, url: String) -> Image {
-        let image = Image.MR_createEntity()
-        image.timestamp = timestamp
-        image.title = title
-        image.url = url
-        image.index()
-        return image
-    }
 }
 
 extension Image: Downloadable {

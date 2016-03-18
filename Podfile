@@ -4,10 +4,10 @@
 use_frameworks!
 
 target 'SearchDemo' do
-  pod 'MagicalRecord', '~> 2.3'
+	pod 'CocoaLumberjack/Swift'
 end
 
 target 'SearchDemoTests' do
-
+    
 end
 

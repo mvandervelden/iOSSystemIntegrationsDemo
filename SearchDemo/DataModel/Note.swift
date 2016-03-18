@@ -1,17 +1,9 @@
-import Foundation
+import UIKit
 import CoreData
 import CoreSpotlight
 import MobileCoreServices
 
 class Note: NSManagedObject {
-    class func create(timestamp: NSDate, text: String) -> Note {
-        let note = Note.MR_createEntity()
-        note.timestamp = timestamp
-        note.text = text
-        note.id = NSUUID().UUIDString
-        note.index()
-        return note
-    }
 }
 
 extension Note: Indexable {
