@@ -6,9 +6,9 @@ class Storage {
        return DataFactory()
     }()
     
-    lazy var managedObjectContext : NSManagedObjectContext = {
+    var managedObjectContext : NSManagedObjectContext {
         return DataController.sharedInstance.managedObjectContext
-    }()
+    }
     
     let contactsFetch = NSFetchRequest(entityName: "Contact")
     let notesFetch = NSFetchRequest(entityName: "Note")

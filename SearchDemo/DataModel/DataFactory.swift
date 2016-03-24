@@ -2,12 +2,12 @@ import Foundation
 import CoreData
 
 class DataFactory {
-    lazy var dataController : DataController = {
-        return DataController.sharedInstance
-    }()
+    var managedObjectContext : NSManagedObjectContext  {
+        return DataController.sharedInstance.managedObjectContext
+    }
     
     func createNote(timestamp: NSDate, text: String) -> Note {
-        let note = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: dataController.managedObjectContext) as! Note
+        let note = NSEntityDescription.insertNewObjectForEntityForName("Note", inManagedObjectContext: managedObjectContext) as! Note
         note.timestamp = timestamp
         note.text = text
         note.id = NSUUID().UUIDString
@@ -16,7 +16,7 @@ class DataFactory {
     }
     
     func createImage(timestamp: NSDate, title: String, url: String) -> Image {
-        let image = NSEntityDescription.insertNewObjectForEntityForName("Image", inManagedObjectContext: dataController.managedObjectContext) as! Image
+        let image = NSEntityDescription.insertNewObjectForEntityForName("Image", inManagedObjectContext: managedObjectContext) as! Image
         image.timestamp = timestamp
         image.title = title
         image.url = url
@@ -25,7 +25,7 @@ class DataFactory {
     }
     
     func createContact(name: String, phone: String, email: String) -> Contact {
-        let contact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext: dataController.managedObjectContext) as! Contact
+        let contact = NSEntityDescription.insertNewObjectForEntityForName("Contact", inManagedObjectContext: managedObjectContext) as! Contact
         contact.name = name
         contact.phone = phone
         contact.email = email
