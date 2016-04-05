@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3336681CB38FE600AE957E /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */; };
 		0C57EDE61C491051009D3DA1 /* Indexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57EDE51C491051009D3DA1 /* Indexable.swift */; };
 		0C5E12961C44E72700D0366E /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */; };
 		0C5E12981C44E75200D0366E /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12971C44E75200D0366E /* ViewData.swift */; };
@@ -15,6 +16,7 @@
 		0C8435E51C915841001C6141 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8435E31C915841001C6141 /* MainInterface.storyboard */; };
 		0C8435E91C915841001C6141 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C8435DF1C915841001C6141 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0C8F4E951C59356F004ADF27 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F4E941C59356F004ADF27 /* ContactTableViewCell.swift */; };
+		0CA5B9E11CA40B1C007C4132 /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */; };
 		0CE51E0D1C9ACCBE00C937FF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7DE2EC93576F8329A03 /* Note.swift */; };
 		0CE51E0E1C9ACCC200C937FF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA50001C4570B2004067EE /* Storage.swift */; };
 		0CE51E0F1C9ACDBC00C937FF /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */; };
@@ -102,6 +104,7 @@
 		0C8435E41C915841001C6141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		0C8435E61C915841001C6141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8F4E941C59356F004ADF27 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataControllerDelegate.swift; path = SearchDemoTests/DataControllerDelegate.swift; sourceTree = "<group>"; };
 		0CE51E161C9AD12A00C937FF /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Share.entitlements; sourceTree = "<group>"; };
 		0CE51E171C9B509E00C937FF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0CE51E191C9BD69C00C937FF /* DataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataFactory.swift; path = SearchDemo/DataModel/DataFactory.swift; sourceTree = "<group>"; };
@@ -247,6 +250,7 @@
 				7149F7DE2EC93576F8329A03 /* Note.swift */,
 				0CFA50001C4570B2004067EE /* Storage.swift */,
 				0CE51E171C9B509E00C937FF /* DataController.swift */,
+				0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */,
 				0CE51E191C9BD69C00C937FF /* DataFactory.swift */,
 			);
 			name = DataModel;
@@ -569,6 +573,7 @@
 				0CE51E0F1C9ACDBC00C937FF /* Note+CoreDataProperties.swift in Sources */,
 				0CE51E111C9ACDEB00C937FF /* Indexable.swift in Sources */,
 				0CE51E0D1C9ACCBE00C937FF /* Note.swift in Sources */,
+				0C3336681CB38FE600AE957E /* DataControllerDelegate.swift in Sources */,
 				0CE51E101C9ACDC200C937FF /* SearchDemo.xcdatamodeld in Sources */,
 				0CE51E0E1C9ACCC200C937FF /* Storage.swift in Sources */,
 				0CE51E151C9ACE1000C937FF /* Contact+CoreDataProperties.swift in Sources */,
@@ -598,6 +603,7 @@
 				7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */,
 				7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */,
 				0C57EDE61C491051009D3DA1 /* Indexable.swift in Sources */,
+				0CA5B9E11CA40B1C007C4132 /* DataControllerDelegate.swift in Sources */,
 				7149F6C1362FCDA8A3062384 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

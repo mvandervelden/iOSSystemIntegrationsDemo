@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-
+        DataController.sharedInstance.delegate = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
@@ -114,6 +114,13 @@ class ViewController: UIViewController {
                 self.refreshScreen()
             }
         }
+    }
+}
+
+extension ViewController: DataControllerDelegate {
+    func didInitializeStorage() {
+        updateItems()
+        refreshScreen()
     }
 }
 
