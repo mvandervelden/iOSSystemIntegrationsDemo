@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         DataController.sharedInstance.delegate = self
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
 
         updateItems()

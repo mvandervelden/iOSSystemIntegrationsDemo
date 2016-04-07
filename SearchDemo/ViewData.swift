@@ -19,7 +19,7 @@ enum TableViewItem {
 }
 
 protocol Updatable: class {
-    typealias ViewData
+    associatedtype ViewData
 
     func updateWithViewData(viewData: ViewData)
 }
