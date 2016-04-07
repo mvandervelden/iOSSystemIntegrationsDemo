@@ -173,13 +173,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C6AFD6E1CB6B586009FDF56 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		0C8435E01C915841001C6141 /* Share */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +211,6 @@
 		0CF852DE1C439402007CB94D /* SearchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0C6AFD6E1CB6B586009FDF56 /* New Group */,
 				F8729E841C5533B500572D1A /* SearchDemo.entitlements */,
 				0CFA4FFF1C456FE2004067EE /* DataModel */,
 				0CF852DF1C439402007CB94D /* AppDelegate.swift */,
