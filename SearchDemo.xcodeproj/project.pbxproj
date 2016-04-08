@@ -95,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		08BAEBB352F249708B0FFC13 /* Pods-SearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemo/Pods-SearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0C2FD4E21CB7BDA200DBBFF8 /* SearchActions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SearchActions.entitlements; sourceTree = "<group>"; };
 		0C57EDE51C491051009D3DA1 /* Indexable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indexable.swift; sourceTree = "<group>"; };
 		0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		0C5E12971C44E75200D0366E /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
@@ -280,6 +281,7 @@
 		F8DC0CFB1C98AB49001FA508 /* SearchActions */ = {
 			isa = PBXGroup;
 			children = (
+				0C2FD4E21CB7BDA200DBBFF8 /* SearchActions.entitlements */,
 				F8DC0CFC1C98AB49001FA508 /* ActionViewController.swift */,
 				F8DC0CFE1C98AB49001FA508 /* MainInterface.storyboard */,
 				F8DC0D011C98AB49001FA508 /* Info.plist */,
@@ -406,6 +408,11 @@
 					F8DC0CF91C98AB49001FA508 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = CS7SZ6KGXK;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -863,11 +870,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SearchActions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.SearchActions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.Action;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -878,11 +886,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SearchActions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.SearchActions;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchGroup.SearchDemo.Action;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
