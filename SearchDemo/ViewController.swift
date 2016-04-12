@@ -21,9 +21,6 @@ class ViewController: UIViewController {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refresh(_:)), forControlEvents: .ValueChanged)
         tableView.addSubview(refreshControl)
-
-//        updateItems()
-//        refreshScreen()
     }
 
     func refreshScreen() {
