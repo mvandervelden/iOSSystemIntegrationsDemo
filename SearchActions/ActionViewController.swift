@@ -12,14 +12,24 @@ import MobileCoreServices
 class ActionViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageTitleTextField: UITextField!
+
+    var imageURLToSearch: NSURL?
+
+    lazy var storage : Storage = {
+        return Storage()
+    }()
+
+    lazy var factory : DataFactory = {
+        return DataFactory()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        DataController.sharedInstance.delegate = self
     
-        // Get the item[s] we're handling from the extension context.
-        
-        // For example, look for an image and place it into an image view.
-        // Replace this with something appropriate for the type[s] your extension supports.
+        // look for an image and place it into an image view.
         var imageFound = false
         for item: AnyObject in self.extensionContext!.inputItems {
             let inputItem = item as! NSExtensionItem
@@ -31,7 +41,8 @@ class ActionViewController: UIViewController {
                     itemProvider.loadItemForTypeIdentifier(kUTTypeImage as String, options: nil, completionHandler: { (image, error) in
                         NSOperationQueue.mainQueue().addOperationWithBlock {
                             if let strongImageView = weakImageView {
-                                let uiimage = UIImage(data: NSData(contentsOfURL: image as! NSURL)!)!
+                                self.imageURLToSearch = image as? NSURL
+                                let uiimage = UIImage(data: NSData(contentsOfURL: self.imageURLToSearch!)!)!
                                 strongImageView.image = uiimage
                             }
                         }
@@ -56,8 +67,26 @@ class ActionViewController: UIViewController {
 
     @IBAction func done() {
         // Return any edited content to the host app.
-        // This template doesn't do anything, so we just echo the passed in items.
+        if DataController.sharedInstance.storageInitialized, let imageURL = imageURLToSearch {
+
+            var imageTitle = "My image" //TODO: add index
+
+            if (!imageTitleTextField.text!.isEmpty) {
+                imageTitle = imageTitleTextField.text!
+            }
+
+            factory.createImage(NSDate(), title: imageTitle, url: imageURL.absoluteString)
+            DataController.sharedInstance.saveContext()
+        }
+
         self.extensionContext!.completeRequestReturningItems(self.extensionContext!.inputItems, completionHandler: nil)
     }
 
+}
+
+extension ActionViewController: DataControllerDelegate {
+    func didInitializeStorage() {
+
+
+    }
 }

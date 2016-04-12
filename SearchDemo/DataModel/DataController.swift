@@ -5,10 +5,11 @@ class DataController {
     static let sharedInstance = DataController()
 
     var delegate : DataControllerDelegate?
-    
     var managedObjectContext: NSManagedObjectContext
+    var storageInitialized: Bool
 
     init() {
+        storageInitialized = false
         // This resource is the same name as your xcdatamodeld contained in your project.
         guard let modelURL = NSBundle.mainBundle().URLForResource("SearchDemo", withExtension:"momd") else {
             fatalError("Error loading model from bundle")
@@ -36,6 +37,7 @@ class DataController {
             dispatch_async(dispatch_get_main_queue()) {
                 let storage = Storage()
                 storage.prepare()
+                self.storageInitialized = true
                 self.delegate?.didInitializeStorage()
             }
         }

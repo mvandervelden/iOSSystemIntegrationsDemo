@@ -55,6 +55,18 @@
 		F8DC0D001C98AB49001FA508 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8DC0CFE1C98AB49001FA508 /* MainInterface.storyboard */; };
 		F8DC0D041C98AB49001FA508 /* SearchActions.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F8DC0CFA1C98AB49001FA508 /* SearchActions.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8DC0D081C98B93E001FA508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF852E91C439402007CB94D /* Assets.xcassets */; };
+		F8E01CE11CB7C207004652F5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA50001C4570B2004067EE /* Storage.swift */; };
+		F8E01CE21CB7C20C004652F5 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE51E191C9BD69C00C937FF /* DataFactory.swift */; };
+		F8E01CE31CB7C236004652F5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6AFD6F1CB6B5E6009FDF56 /* DataController.swift */; };
+		F8E01CE41CB7C23E004652F5 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7B56EDCA22F17B15A4B /* Contact.swift */; };
+		F8E01CE51CB7C241004652F5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8C3E74E3E33F3B379AC /* Image.swift */; };
+		F8E01CE61CB7C244004652F5 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */; };
+		F8E01CE71CB7C246004652F5 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */; };
+		F8E01CE81CB7C249004652F5 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */; };
+		F8E01CE91CB7C254004652F5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7DE2EC93576F8329A03 /* Note.swift */; };
+		F8E01CEA1CB7C25D004652F5 /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */; };
+		F8E01CEB1CB7C28E004652F5 /* Indexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57EDE51C491051009D3DA1 /* Indexable.swift */; };
+		F8E01CEC1CB7C31D004652F5 /* SearchDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CF852E61C439402007CB94D /* SearchDemo.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -639,7 +651,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E01CEB1CB7C28E004652F5 /* Indexable.swift in Sources */,
+				F8E01CEC1CB7C31D004652F5 /* SearchDemo.xcdatamodeld in Sources */,
 				F8DC0CFD1C98AB49001FA508 /* ActionViewController.swift in Sources */,
+				F8E01CE71CB7C246004652F5 /* Note+CoreDataProperties.swift in Sources */,
+				F8E01CE51CB7C241004652F5 /* Image.swift in Sources */,
+				F8E01CEA1CB7C25D004652F5 /* DataControllerDelegate.swift in Sources */,
+				F8E01CE81CB7C249004652F5 /* Contact+CoreDataProperties.swift in Sources */,
+				F8E01CE31CB7C236004652F5 /* DataController.swift in Sources */,
+				F8E01CE91CB7C254004652F5 /* Note.swift in Sources */,
+				F8E01CE41CB7C23E004652F5 /* Contact.swift in Sources */,
+				F8E01CE11CB7C207004652F5 /* Storage.swift in Sources */,
+				F8E01CE21CB7C20C004652F5 /* DataFactory.swift in Sources */,
+				F8E01CE61CB7C244004652F5 /* Image+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
