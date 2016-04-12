@@ -15,6 +15,8 @@ extension Image: Downloadable {
     func downloadImage(completion: (image:Image) -> Void) {
         if (image != nil) {
             completion(image: self)
+            return
+            
         }
         getData() {
             (data, response, error) in
