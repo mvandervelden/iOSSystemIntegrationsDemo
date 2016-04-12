@@ -17,9 +17,3 @@ enum TableViewItem {
     case Image(viewData:ImageCellViewData)
     case Contact(viewData:ContactCellViewData)
 }
-
-protocol Updatable: class {
-    associatedtype ViewData
-
-    func updateWithViewData(viewData: ViewData)
-}
