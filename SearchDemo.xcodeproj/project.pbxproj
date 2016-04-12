@@ -67,6 +67,9 @@
 		F8E01CEA1CB7C25D004652F5 /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */; };
 		F8E01CEB1CB7C28E004652F5 /* Indexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57EDE51C491051009D3DA1 /* Indexable.swift */; };
 		F8E01CEC1CB7C31D004652F5 /* SearchDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CF852E61C439402007CB94D /* SearchDemo.xcdatamodeld */; };
+		F8E01DB01CBD08FD004652F5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E01DAF1CBD08FD004652F5 /* URLs.swift */; };
+		F8E01DB11CBD08FD004652F5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E01DAF1CBD08FD004652F5 /* URLs.swift */; };
+		F8E01DB21CBD08FD004652F5 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E01DAF1CBD08FD004652F5 /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,7 @@
 		F8DC0CFC1C98AB49001FA508 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		F8DC0CFF1C98AB49001FA508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F8DC0D011C98AB49001FA508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E01DAF1CBD08FD004652F5 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		FFD2DDDD012B3CDE5278E23B /* Pods-SearchDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemoTests/Pods-SearchDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +234,7 @@
 		0CF852DE1C439402007CB94D /* SearchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F8E01DAE1CBD08B7004652F5 /* SharedUtilities */,
 				F8729E841C5533B500572D1A /* SearchDemo.entitlements */,
 				0CFA4FFF1C456FE2004067EE /* DataModel */,
 				0C6AFD751CB6B874009FDF56 /* CellConfigurator.swift */,
@@ -308,6 +313,14 @@
 				F8DC0D011C98AB49001FA508 /* Info.plist */,
 			);
 			path = SearchActions;
+			sourceTree = "<group>";
+		};
+		F8E01DAE1CBD08B7004652F5 /* SharedUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F8E01DAF1CBD08FD004652F5 /* URLs.swift */,
+			);
+			name = SharedUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,6 +610,7 @@
 				0CE51E141C9ACE1000C937FF /* Image+CoreDataProperties.swift in Sources */,
 				0C8435E21C915841001C6141 /* ShareViewController.swift in Sources */,
 				0CE51E131C9ACE0A00C937FF /* Image.swift in Sources */,
+				F8E01DB11CBD08FD004652F5 /* URLs.swift in Sources */,
 				0CE51E0F1C9ACDBC00C937FF /* Note+CoreDataProperties.swift in Sources */,
 				0CE51E111C9ACDEB00C937FF /* Indexable.swift in Sources */,
 				0CE51E0D1C9ACCBE00C937FF /* Note.swift in Sources */,
@@ -630,6 +644,7 @@
 				7149F5D916974ED305F14C00 /* Image.swift in Sources */,
 				7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */,
 				7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */,
+				F8E01DB01CBD08FD004652F5 /* URLs.swift in Sources */,
 				7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */,
 				0C57EDE61C491051009D3DA1 /* Indexable.swift in Sources */,
 				0CA5B9E11CA40B1C007C4132 /* DataControllerDelegate.swift in Sources */,
@@ -654,6 +669,7 @@
 				F8E01CEB1CB7C28E004652F5 /* Indexable.swift in Sources */,
 				F8E01CEC1CB7C31D004652F5 /* SearchDemo.xcdatamodeld in Sources */,
 				F8DC0CFD1C98AB49001FA508 /* ActionViewController.swift in Sources */,
+				F8E01DB21CBD08FD004652F5 /* URLs.swift in Sources */,
 				F8E01CE71CB7C246004652F5 /* Note+CoreDataProperties.swift in Sources */,
 				F8E01CE51CB7C241004652F5 /* Image.swift in Sources */,
 				F8E01CEA1CB7C25D004652F5 /* DataControllerDelegate.swift in Sources */,
