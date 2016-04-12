@@ -22,6 +22,7 @@ class ShareViewController: SLComposeServiceViewController {
     
     override func presentationAnimationDidFinish() {
         super.presentationAnimationDidFinish()
+        DataController.sharedInstance.delegate = self
         charactersRemaining = maxCharacters;
         placeholder = "Text you want to share"
         
@@ -50,9 +51,11 @@ class ShareViewController: SLComposeServiceViewController {
     }
 
     override func didSelectPost() {
-        storage.prepare()
-        // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
-        factory.createNote(NSDate(), text: contentText)
+        if DataController.sharedInstance.storageInitialized {
+            // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
+            factory.createNote(NSDate(), text: contentText)
+            DataController.sharedInstance.saveContext()
+        }
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
         self.extensionContext!.completeRequestReturningItems([], completionHandler: nil)
     }
@@ -60,4 +63,8 @@ class ShareViewController: SLComposeServiceViewController {
     override func didSelectCancel() {
         super.didSelectCancel()
     }
+}
+
+extension ShareViewController: DataControllerDelegate {
+    func didInitializeStorage() {}
 }
