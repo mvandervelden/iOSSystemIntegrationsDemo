@@ -115,7 +115,7 @@
 /* Begin PBXFileReference section */
 		08BAEBB352F249708B0FFC13 /* Pods-SearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemo/Pods-SearchDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0C2FD4E21CB7BDA200DBBFF8 /* SearchActions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SearchActions.entitlements; sourceTree = "<group>"; };
-		0C57EDE51C491051009D3DA1 /* Indexable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indexable.swift; sourceTree = "<group>"; };
+		0C57EDE51C491051009D3DA1 /* Indexable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Indexable.swift; path = SearchDemo/Indexable.swift; sourceTree = "<group>"; };
 		0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		0C5E12971C44E75200D0366E /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		0C5E12991C44E79800D0366E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -245,7 +245,6 @@
 				0C5E12951C44E72700D0366E /* NoteTableViewCell.swift */,
 				0C8F4E941C59356F004ADF27 /* ContactTableViewCell.swift */,
 				0C5E12991C44E79800D0366E /* ImageTableViewCell.swift */,
-				0C57EDE51C491051009D3DA1 /* Indexable.swift */,
 				0C5E12971C44E75200D0366E /* ViewData.swift */,
 				0CF852E31C439402007CB94D /* Main.storyboard */,
 				0CF852EB1C439403007CB94D /* LaunchScreen.storyboard */,
@@ -269,17 +268,18 @@
 		0CFA4FFF1C456FE2004067EE /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				0C6AFD6F1CB6B5E6009FDF56 /* DataController.swift */,
 				0CF852E61C439402007CB94D /* SearchDemo.xcdatamodeld */,
+				0C6AFD6F1CB6B5E6009FDF56 /* DataController.swift */,
+				0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */,
+				0CE51E191C9BD69C00C937FF /* DataFactory.swift */,
+				0CFA50001C4570B2004067EE /* Storage.swift */,
+				0C57EDE51C491051009D3DA1 /* Indexable.swift */,
+				7149F7DE2EC93576F8329A03 /* Note.swift */,
 				7149F7B56EDCA22F17B15A4B /* Contact.swift */,
 				7149F8C3E74E3E33F3B379AC /* Image.swift */,
 				7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */,
 				7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */,
 				7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */,
-				7149F7DE2EC93576F8329A03 /* Note.swift */,
-				0CFA50001C4570B2004067EE /* Storage.swift */,
-				0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */,
-				0CE51E191C9BD69C00C937FF /* DataFactory.swift */,
 			);
 			name = DataModel;
 			path = ..;
