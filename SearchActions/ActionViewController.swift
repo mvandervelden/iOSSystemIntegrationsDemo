@@ -41,8 +41,10 @@ class ActionViewController: UIViewController {
                     itemProvider.loadItemForTypeIdentifier(kUTTypeImage as String, options: nil, completionHandler: { (image, error) in
                         NSOperationQueue.mainQueue().addOperationWithBlock {
                             if let strongImageView = weakImageView {
-                                self.imageURLToSearch = image as? NSURL
-                                let uiimage = UIImage(data: NSData(contentsOfURL: self.imageURLToSearch!)!)!
+                                let imageURL = image as? NSURL
+                                let data = NSData(contentsOfURL: imageURL!)
+                                self.imageURLToSearch = self.saveImage(data!, name:imageURL!.lastPathComponent!)
+                                let uiimage = UIImage(data: data!)!
                                 strongImageView.image = uiimage
                             }
                         }
@@ -80,6 +82,29 @@ class ActionViewController: UIViewController {
         }
 
         self.extensionContext!.completeRequestReturningItems(self.extensionContext!.inputItems, completionHandler: nil)
+    }
+
+    private func saveImage(data: NSData, name: String) -> NSURL?{
+        let groupURL = URLs().groupURL
+        let sharedDirURL = groupURL.URLByAppendingPathComponent("ImagesE")
+
+        let fileManager = NSFileManager.defaultManager()
+        do {
+            if !fileManager.fileExistsAtPath(sharedDirURL.path!) {
+                try fileManager.createDirectoryAtPath(sharedDirURL.path!, withIntermediateDirectories: false, attributes: nil)
+            }
+            let fileURL = sharedDirURL.URLByAppendingPathComponent(name)
+            if data.writeToURL(fileURL, atomically: true) {
+                return fileURL
+            }
+
+        } catch let error as NSError {
+            NSLog("\(error.localizedDescription)")
+        } catch {
+            print("general error - \(error)")
+        }
+
+        return nil
     }
 
 }
