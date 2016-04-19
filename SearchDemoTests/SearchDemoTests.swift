@@ -1,11 +1,3 @@
-//
-//  SearchDemoTests.swift
-//  SearchDemoTests
-//
-//  Created by maarten.van.der.velden@philips.com on 11/01/16.
-//  Copyright © 2016 Philips. All rights reserved.
-//
-
 import XCTest
 @testable import SearchDemo
 
@@ -22,8 +14,7 @@ class SearchDemoTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
     }
     
     func testPerformanceExample() {

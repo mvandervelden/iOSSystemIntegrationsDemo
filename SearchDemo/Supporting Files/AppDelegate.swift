@@ -1,12 +1,6 @@
 import UIKit
 import CoreSpotlight
 
-protocol ActivityRestorator {
-    func restoreFromWeb(activity:NSUserActivity) -> Bool
-    func restoreFromActivity(activity:NSUserActivity) -> Bool
-    func restoreFromSpotlight(activity:NSUserActivity) -> Bool
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

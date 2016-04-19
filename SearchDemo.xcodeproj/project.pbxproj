@@ -42,13 +42,14 @@
 		7149F528A23551DE554762C5 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */; };
 		7149F5D916974ED305F14C00 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8C3E74E3E33F3B379AC /* Image.swift */; };
 		7149F62FA9F7D75A5AFDBBD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7149F77808B906234A441D86 /* Assets.xcassets */; };
+		7149F6A3CC78B1EE0A4A15AB /* ActivityRestorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F5E73B061D910BA3C136 /* ActivityRestorator.swift */; };
 		7149F6C1362FCDA8A3062384 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7DE2EC93576F8329A03 /* Note.swift */; };
-		7149F74268F17FBA170E97EB /* SearchDemo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 7149F0B296A8BE82F5ED7C5D /* SearchDemo.entitlements */; };
 		7149F865E5B1F3E5E6D151B8 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F33FEE9260983B77EF71 /* NoteTableViewCell.swift */; };
 		7149F880D03629DB1933EED8 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */; };
 		7149F9043D63E6212B2CB2E7 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FF51102A6DB5683BED59 /* URLs.swift */; };
 		7149F93E8EDB0CD7E113E3E1 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FA0C0D95E7B5DCF7880D /* Contact+CoreDataProperties.swift */; };
 		7149F98FF739AF1B37632250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7149F77808B906234A441D86 /* Assets.xcassets */; };
+		7149FA089B5C3204B26C4C4E /* SearchDemo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 7149F7D5A949F6856D625B82 /* SearchDemo.entitlements */; };
 		7149FACD1EEE03C61E71F493 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149FD9DD03A65870CA84063 /* ImageTableViewCell.swift */; };
 		7149FB4D710732083E9B836B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F7B56EDCA22F17B15A4B /* Contact.swift */; };
 		7149FC422249422323F510A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7149F56212E644032312DA91 /* LaunchScreen.storyboard */; };
@@ -146,12 +147,13 @@
 		0CFA50001C4570B2004067EE /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = SearchDemo/DataModel/Storage.swift; sourceTree = "<group>"; };
 		23640CCA1DD68F9796395300 /* Pods-SearchDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemoTests/Pods-SearchDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		7149F00BF5F0CA29E5582433 /* CellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
-		7149F0B296A8BE82F5ED7C5D /* SearchDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = file.entitlements; path = SearchDemo.entitlements; sourceTree = "<group>"; };
 		7149F33FEE9260983B77EF71 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		7149F534AFFC65B1EB7ADF51 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "SearchDemo/DataModel/Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7149F5E73B061D910BA3C136 /* ActivityRestorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRestorator.swift; sourceTree = "<group>"; };
 		7149F774DE66BC27ABC70E95 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		7149F77808B906234A441D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7149F7B56EDCA22F17B15A4B /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = SearchDemo/DataModel/Contact.swift; sourceTree = "<group>"; };
+		7149F7D5A949F6856D625B82 /* SearchDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = file.entitlements; path = SearchDemo.entitlements; sourceTree = "<group>"; };
 		7149F7D79CC3B56BB537AEB4 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "SearchDemo/DataModel/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7149F7DE2EC93576F8329A03 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = SearchDemo/DataModel/Note.swift; sourceTree = "<group>"; };
 		7149F8C3E74E3E33F3B379AC /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = SearchDemo/DataModel/Image.swift; sourceTree = "<group>"; };
@@ -263,12 +265,14 @@
 				7149FD17083B29619093712A /* Shared */,
 				0CFA4FFF1C456FE2004067EE /* DataModel */,
 				7149FFF5D930822096FA318F /* Cells */,
+				7149F5E73B061D910BA3C136 /* ActivityRestorator.swift */,
 				0CF852E11C439402007CB94D /* ViewController.swift */,
 				F87C02BC1C470D850079D7A7 /* DetailViewController.swift */,
 				0C5E12971C44E75200D0366E /* ViewData.swift */,
 				7149F774DE66BC27ABC70E95 /* Updatable.swift */,
 				0CF852E31C439402007CB94D /* Main.storyboard */,
 				7149F8B0561CE1BE0D86160D /* Supporting Files */,
+				7149F7D5A949F6856D625B82 /* SearchDemo.entitlements */,
 			);
 			path = SearchDemo;
 			sourceTree = "<group>";
@@ -308,7 +312,6 @@
 				7149F77808B906234A441D86 /* Assets.xcassets */,
 				7149F56212E644032312DA91 /* LaunchScreen.storyboard */,
 				7149FA1100C83353C3EA0C46 /* Info.plist */,
-				7149F0B296A8BE82F5ED7C5D /* SearchDemo.entitlements */,
 				7149FD3C413ADF4F92648FBF /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
@@ -569,7 +572,7 @@
 				0CF852E51C439402007CB94D /* Main.storyboard in Resources */,
 				7149F98FF739AF1B37632250 /* Assets.xcassets in Resources */,
 				7149FC422249422323F510A9 /* LaunchScreen.storyboard in Resources */,
-				7149F74268F17FBA170E97EB /* SearchDemo.entitlements in Resources */,
+				7149FA089B5C3204B26C4C4E /* SearchDemo.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +744,7 @@
 				7149F29584BB375868DEB608 /* ContactTableViewCell.swift in Sources */,
 				7149FFBFA23807A446EFCB27 /* CellConfiguratorType.swift in Sources */,
 				7149F865E5B1F3E5E6D151B8 /* NoteTableViewCell.swift in Sources */,
+				7149F6A3CC78B1EE0A4A15AB /* ActivityRestorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,7 +850,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -863,7 +866,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -969,7 +971,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = SearchDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SearchDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo2;
@@ -989,7 +991,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = SearchDemo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SearchDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.philips.pins.SearchDemo2;
@@ -1027,6 +1029,7 @@
 		F806D9451CBFC776003DB9CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = ActionWithoutUI/ActionWithoutUI.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1043,6 +1046,7 @@
 		F806D9461CBFC776003DB9CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = ActionWithoutUI/ActionWithoutUI.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1060,7 +1064,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1076,7 +1079,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
