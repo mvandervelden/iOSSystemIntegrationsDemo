@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         where segue.identifier == "showDetail" {
 
             if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
-
                 if let cellConfigurator = items[selectedRow] as? CellConfigurator<NoteTableViewCell> {
                     destination.note = cellConfigurator.viewData.note
                 } else if let cellConfigurator = items[selectedRow] as? CellConfigurator<ImageTableViewCell> {

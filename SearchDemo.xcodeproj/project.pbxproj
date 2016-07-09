@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C16653A1CC748470002A565 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1665391CC748470002A565 /* Activity.swift */; };
 		0C3336681CB38FE600AE957E /* DataControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5B9E01CA40B1C007C4132 /* DataControllerDelegate.swift */; };
 		0C57EDE61C491051009D3DA1 /* Indexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C57EDE51C491051009D3DA1 /* Indexable.swift */; };
 		0C5E12981C44E75200D0366E /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E12971C44E75200D0366E /* ViewData.swift */; };
@@ -126,6 +127,7 @@
 
 /* Begin PBXFileReference section */
 		08BAEBB352F249708B0FFC13 /* Pods-SearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchDemo/Pods-SearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		0C1665391CC748470002A565 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0C2FD4E21CB7BDA200DBBFF8 /* SearchActions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SearchActions.entitlements; sourceTree = "<group>"; };
 		0C57EDE51C491051009D3DA1 /* Indexable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Indexable.swift; path = SearchDemo/Indexable.swift; sourceTree = "<group>"; };
 		0C5E12971C44E75200D0366E /* ViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				0CFA4FFF1C456FE2004067EE /* DataModel */,
 				7149FFF5D930822096FA318F /* Cells */,
 				7149F5E73B061D910BA3C136 /* ActivityRestorator.swift */,
+				0C1665391CC748470002A565 /* Activity.swift */,
 				0CF852E11C439402007CB94D /* ViewController.swift */,
 				F87C02BC1C470D850079D7A7 /* DetailViewController.swift */,
 				0C5E12971C44E75200D0366E /* ViewData.swift */,
@@ -726,6 +729,7 @@
 				0CF852E21C439402007CB94D /* ViewController.swift in Sources */,
 				0C6AFD701CB6B5E6009FDF56 /* DataController.swift in Sources */,
 				0C5E12981C44E75200D0366E /* ViewData.swift in Sources */,
+				0C16653A1CC748470002A565 /* Activity.swift in Sources */,
 				F87C02BD1C470D850079D7A7 /* DetailViewController.swift in Sources */,
 				0CFA50011C4570B2004067EE /* Storage.swift in Sources */,
 				7149FB4D710732083E9B836B /* Contact.swift in Sources */,
