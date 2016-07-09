@@ -38,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
-    func viewControllerInStack(navigationController:UINavigationController) -> ViewController? {
-        if let controller = navigationController.topViewController as? ViewController {
+    func viewControllerInStack(navigationController:UINavigationController) -> MasterViewController? {
+        if let controller = navigationController.topViewController as? MasterViewController {
             return controller
         }
         return nil

@@ -4,7 +4,7 @@ import CoreSpotlight
 let noteCellIdentifier = "NoteTableViewCell"
 let imageCellIdentifier = "ImageTableViewCell"
 
-class ViewController: UIViewController {
+class MasterViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var items: [CellConfiguratorType] = []
@@ -91,14 +91,14 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: DataControllerDelegate {
+extension MasterViewController: DataControllerDelegate {
     func didInitializeStorage() {
         updateItems()
         refreshScreen()
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension MasterViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -111,14 +111,14 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension MasterViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showDetail", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }
 
-extension ViewController : ActivityRestorator {
+extension MasterViewController : ActivityRestorator {
     func restoreFromWeb(activity:NSUserActivity) -> Bool {
         guard let paths = activity.webpageURL!.pathComponents
             where paths.count > 1
