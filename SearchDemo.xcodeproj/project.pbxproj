@@ -1033,7 +1033,7 @@
 		F806D9451CBFC776003DB9CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Masked";
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = ActionWithoutUI/ActionWithoutUI.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1050,7 +1050,7 @@
 		F806D9461CBFC776003DB9CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Masked";
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = ActionWithoutUI/ActionWithoutUI.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1067,7 +1067,7 @@
 		F8DC0D051C98AB49001FA508 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Masked";
 				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1082,7 +1082,7 @@
 		F8DC0D061C98AB49001FA508 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Masked";
 				CODE_SIGN_ENTITLEMENTS = SearchActions/SearchActions.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
