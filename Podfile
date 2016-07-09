@@ -8,6 +8,7 @@ target 'SearchDemo' do
 end
 
 target 'SearchDemoTests' do
-    
+    pod 'Nimble', '~> 4.1'
+	pod 'Quick', '~> 0.9'
 end
 
