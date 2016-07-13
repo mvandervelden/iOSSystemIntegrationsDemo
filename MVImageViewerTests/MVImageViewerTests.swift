@@ -8,8 +8,7 @@ class DetailViewControllerSpec: QuickSpec {
             var subject : DetailViewController!
             
             beforeEach() {
-                let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                subject = storyboard.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+                subject = UIViewController.loadViewController(withIdentifier: "DetailViewController", fromStoryboard: "Main") as! DetailViewController
             }
             
             context("given a detail item") {
@@ -19,8 +18,7 @@ class DetailViewControllerSpec: QuickSpec {
                 
                 context("when detail screen is shown") {
                     beforeEach() {
-                        UIApplication.sharedApplication().keyWindow!.rootViewController = subject
-                        let _ = subject.view
+                        subject.show()
                     }
                     
                     it("sets the item's description in the detail label") {
@@ -42,8 +40,7 @@ class DetailViewControllerSpec: QuickSpec {
             context("given no detail item") {
                 context("when detail screen is shown") {
                     beforeEach() {
-                        UIApplication.sharedApplication().keyWindow!.rootViewController = subject
-                        let _ = subject.view
+                        subject.show()
                     }
                     
                     it("has an empty label") {
