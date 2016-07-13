@@ -15,6 +15,7 @@
 		0C01EA721D369F6400E0F279 /* MVImageViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01EA711D369F6400E0F279 /* MVImageViewerTests.swift */; };
 		7149F6EB966085D901A6728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F281B2A502FF768C5B98 /* AppDelegate.swift */; };
 		7149F81CA772D89497C3F9DD /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */; };
+		7149F83BD0B974A30DC50A83 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7149F225CC7F38D806F40FD1 /* Podfile */; };
 		7149F9DCBD1D912D45CA8F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7149F1F16E8303F9155C0405 /* LICENSE */; };
 		7149FBC0249B4FC6FEFF3E32 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7149F850C6AEFCE7125C7909 /* README.md */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		0C01EA731D369F6400E0F279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7149F063F26B224517F97383 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		7149F1F16E8303F9155C0405 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		7149F225CC7F38D806F40FD1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		7149F281B2A502FF768C5B98 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7149F850C6AEFCE7125C7909 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = file.yml; path = .travis.yml; sourceTree = SOURCE_ROOT; };
@@ -70,6 +72,7 @@
 				0C01EA591D369F6400E0F279 /* MVImageViewer */,
 				0C01EA701D369F6400E0F279 /* MVImageViewerTests */,
 				0C01EA581D369F6400E0F279 /* Products */,
+				7149F225CC7F38D806F40FD1 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +205,7 @@
 				0C01EA621D369F6400E0F279 /* Main.storyboard in Resources */,
 				7149F81CA772D89497C3F9DD /* .travis.yml in Resources */,
 				7149F9DCBD1D912D45CA8F52 /* LICENSE in Resources */,
+				7149F83BD0B974A30DC50A83 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
