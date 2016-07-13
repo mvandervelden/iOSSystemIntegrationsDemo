@@ -6,11 +6,15 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
-    
     var detailItem: AnyObject? {
         didSet {
             configureView()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureView()
     }
     
     func configureView() {
@@ -21,11 +25,6 @@ class DetailViewController: UIViewController {
                 label.text = ""
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureView()
     }
 }
 
