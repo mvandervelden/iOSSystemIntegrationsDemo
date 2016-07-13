@@ -1,0 +1,6 @@
+framework module Pods_MVImageViewer {
+  umbrella header "Pods-MVImageViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}

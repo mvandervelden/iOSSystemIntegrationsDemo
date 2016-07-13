@@ -1,0 +1,6 @@
+framework module Pods_MVImageViewerTests {
+  umbrella header "Pods-MVImageViewerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
