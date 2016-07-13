@@ -1,4 +1,4 @@
 language: objective-c
-xcode_workspace: SearchDemo.xcworkspace
-xcode_scheme: SearchDemo
+xcode_project: MVImageViewer.xcodeproj
+xcode_scheme: MVImageViewer
 osx_image: xcode7.3
