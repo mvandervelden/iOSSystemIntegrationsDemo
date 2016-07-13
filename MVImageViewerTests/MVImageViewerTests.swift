@@ -1,9 +1,10 @@
-import XCTest
-@testable import MVImageViewer
+import Quick
+import Nimble
 
-class MVImageViewerTests: XCTestCase {
-    
-    func testExample() {
-        XCTAssert(true)
+class MVImageViewerSpec: QuickSpec {
+    override func spec() {
+        it("works") {
+            expect(true).to(beTruthy())
+        }
     }
 }
