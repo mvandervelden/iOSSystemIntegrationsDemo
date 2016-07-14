@@ -4,15 +4,6 @@ import Quick
 import Nimble
 @testable import MVImageViewer
 
-class InsertionTableView : UITableView {
-    var insertedIndexPath : NSIndexPath?
-    
-    override func insertRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
-        insertedIndexPath = indexPaths.first
-    }
-}
-
-
 class MasterViewControllerSpec : QuickSpec {
     override func spec() {
         describe("master view controller") {
@@ -29,9 +20,11 @@ class MasterViewControllerSpec : QuickSpec {
                 
                 describe("adding a new object") {
                     var tableView : InsertionTableView!
+                    
                     beforeEach() {
                         tableView = InsertionTableView()
                         subject.tableView = tableView
+                        
                         subject.insertNewObject(self)
                     }
                     
