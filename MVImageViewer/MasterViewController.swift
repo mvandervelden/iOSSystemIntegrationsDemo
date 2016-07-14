@@ -21,7 +21,9 @@ class MasterViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+        if let split = self.splitViewController {
+            self.clearsSelectionOnViewWillAppear = split.collapsed
+        }
         super.viewWillAppear(animated)
     }
     
@@ -32,7 +34,7 @@ class MasterViewController: UITableViewController {
     }
 }
 
-// MARK: - Seques
+// MARK: - Segues
 extension MasterViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
