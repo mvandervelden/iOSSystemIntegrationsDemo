@@ -4,8 +4,8 @@
 # can also be listed using the `fastlane actions` command
 
 # If you want to automatically update fastlane if a new version is available:
-update_fastlane
-fastlane_version "1.98.0"
+# update_fastlane
+# fastlane_version "1.98.0"
 
 default_platform :ios
 
