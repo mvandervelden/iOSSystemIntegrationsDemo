@@ -2,3 +2,4 @@ language: objective-c
 xcode_workspace: MVImageViewer.xcworkspace
 xcode_scheme: MVImageViewer
 osx_image: xcode7.3
+xcode_sdk: iphonesimulator
