@@ -20,7 +20,6 @@
 		7149F6EB966085D901A6728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F281B2A502FF768C5B98 /* AppDelegate.swift */; };
 		7149F81CA772D89497C3F9DD /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */; };
 		7149F9DCBD1D912D45CA8F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7149F1F16E8303F9155C0405 /* LICENSE */; };
-		7149FBC0249B4FC6FEFF3E32 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7149F850C6AEFCE7125C7909 /* README.md */; };
 		D83E608F18BA99342AC5A7A0 /* Pods_MVImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ED1109BD99586A56095AE8 /* Pods_MVImageViewerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -370,7 +369,6 @@
 				0C01EA5F1D369F6400E0F279 /* DetailViewController.swift in Sources */,
 				0C01EA5D1D369F6400E0F279 /* MasterViewController.swift in Sources */,
 				7149F6EB966085D901A6728D /* AppDelegate.swift in Sources */,
-				7149FBC0249B4FC6FEFF3E32 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
