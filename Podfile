@@ -1,8 +1,13 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'MVImageViewer' do
+target 'CucumberishTests' do
+#    pod 'Cucumberish', :git => 'https://github.com/Ahmed-Ali/Cucumberish.git', :branch => 'develop'
+    pod 'Cucumberish', :git => 'https://github.com/dgommers/Cucumberish.git', :branch => 'develop'
+end
 
+target 'MVImageViewer' do
+    
 end
 
 target 'MVImageViewerTests' do

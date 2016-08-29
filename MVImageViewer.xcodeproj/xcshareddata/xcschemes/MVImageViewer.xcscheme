@@ -38,6 +38,16 @@
                ReferencedContainer = "container:MVImageViewer.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0C69C3811D6DA88000FD8BAD"
+               BuildableName = "CucumberishTests.xctest"
+               BlueprintName = "CucumberishTests"
+               ReferencedContainer = "container:MVImageViewer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
