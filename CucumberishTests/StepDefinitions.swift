@@ -1,17 +1,18 @@
-import XCTest
+import Quick
+import Nimble
 
 class StepDefinitions: NSObject {
     class func setup() {
         Given("^a (foo)$") {(args, userInfo) -> Void in
-            XCTAssertEqual(args[0], "foo")
+            expect(args[0]).to(equal("foo"))
         }
 
         When("^it is (bar)$") {(args, userInfo) -> Void in
-            XCTAssertEqual(args[0], "bar")
+            expect(args[0]).to(equal("bar"))
         }
 
         Then("^(foobar)$") {(args, userInfo) -> Void in
-            XCTAssertEqual(args[0], "foobar")
+            expect(args[0]).to(equal("foobar"))
         }
     }
 }
