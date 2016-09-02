@@ -21,6 +21,8 @@
 		0C69C38D1D6DB13500FD8BAD /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 0C69C38C1D6DB13500FD8BAD /* Features */; };
 		0CB4CD2A1D70279900DF55F1 /* CucumberishInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4CD291D70279900DF55F1 /* CucumberishInitializer.m */; };
 		0CB4CD2C1D702C2D00DF55F1 /* StepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4CD2B1D702C2D00DF55F1 /* StepDefinitions.swift */; };
+		7149F088D5405661B1713677 /* NSObject+KIFTestActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F831ECB9C93F420A7B7A /* NSObject+KIFTestActorDelegate.swift */; };
+		7149F3AC8C4580D752A763FD /* NSIndexPath+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8D22905622F66F82CBC /* NSIndexPath+Testing.swift */; };
 		7149F6EB966085D901A6728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F281B2A502FF768C5B98 /* AppDelegate.swift */; };
 		7149F81CA772D89497C3F9DD /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */; };
 		7149F9DCBD1D912D45CA8F52 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7149F1F16E8303F9155C0405 /* LICENSE */; };
@@ -66,13 +68,18 @@
 		0CB4CD291D70279900DF55F1 /* CucumberishInitializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CucumberishInitializer.m; sourceTree = "<group>"; };
 		0CB4CD2B1D702C2D00DF55F1 /* StepDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDefinitions.swift; sourceTree = "<group>"; };
 		1E50EA51C25FFFB20EB01FB6 /* Pods-MVImageViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests/Pods-MVImageViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C379EE792489FFD1E2D5CFC /* Pods_KIFSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E05D0B2E57886DB4DD3ED89 /* Pods-CucumberishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests.release.xcconfig"; sourceTree = "<group>"; };
+		331172D76DC15BC67F7E7970 /* Pods_KIFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48BDEC31FF44D7D4A309CF8A /* Pods_KIFCucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFCucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD08C8C66AA95BAD1059EC1 /* Pods_MVImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B402DB733F48D083CA071D7 /* Pods-MVImageViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests/Pods-MVImageViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7149F063F26B224517F97383 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		7149F1F16E8303F9155C0405 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		7149F281B2A502FF768C5B98 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7149F831ECB9C93F420A7B7A /* NSObject+KIFTestActorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+KIFTestActorDelegate.swift"; sourceTree = "<group>"; };
 		7149F850C6AEFCE7125C7909 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		7149F8D22905622F66F82CBC /* NSIndexPath+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+Testing.swift"; sourceTree = "<group>"; };
 		7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = file.yml; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		924A6DE05B2947405D2F2149 /* Pods_MVImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD35AC108BD754AF61990314 /* Pods-CucumberishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,12 +164,13 @@
 		0C69C3831D6DA88000FD8BAD /* CucumberishTests */ = {
 			isa = PBXGroup;
 			children = (
+				0CB4CD281D70279800DF55F1 /* CucumberishTests-Bridging-Header.h */,
 				0C69C38C1D6DB13500FD8BAD /* Features */,
 				0C69C3841D6DA88000FD8BAD /* CucumberishTests.swift */,
 				0CB4CD2B1D702C2D00DF55F1 /* StepDefinitions.swift */,
 				0C69C3861D6DA88000FD8BAD /* Info.plist */,
 				0CB4CD291D70279900DF55F1 /* CucumberishInitializer.m */,
-				0CB4CD281D70279800DF55F1 /* CucumberishTests-Bridging-Header.h */,
+				7149FB5D10628D6471D99359 /* Utils */,
 			);
 			path = CucumberishTests;
 			sourceTree = "<group>";
@@ -173,6 +181,9 @@
 				BB8C3CFD55A48D90E6619154 /* Pods_CucumberishTests.framework */,
 				4BD08C8C66AA95BAD1059EC1 /* Pods_MVImageViewer.framework */,
 				924A6DE05B2947405D2F2149 /* Pods_MVImageViewerTests.framework */,
+				331172D76DC15BC67F7E7970 /* Pods_KIFTests.framework */,
+				2C379EE792489FFD1E2D5CFC /* Pods_KIFSwiftTests.framework */,
+				48BDEC31FF44D7D4A309CF8A /* Pods_KIFCucumberishTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,6 +199,15 @@
 				7149F1F16E8303F9155C0405 /* LICENSE */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7149FB5D10628D6471D99359 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7149F8D22905622F66F82CBC /* NSIndexPath+Testing.swift */,
+				7149F831ECB9C93F420A7B7A /* NSObject+KIFTestActorDelegate.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		7149FB93B5B57C5EFB48F19C /* Helpers */ = {
@@ -377,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 		};
 		53056FA47FE1DDCFFEC67270 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -406,7 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 		};
 		6CB0D9E54A65561C04C4AD8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -435,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 		};
 		C6A3428F1A953DC5EFD67681 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -512,6 +532,8 @@
 				0C69C3851D6DA88000FD8BAD /* CucumberishTests.swift in Sources */,
 				0CB4CD2C1D702C2D00DF55F1 /* StepDefinitions.swift in Sources */,
 				0CB4CD2A1D70279900DF55F1 /* CucumberishInitializer.m in Sources */,
+				7149F3AC8C4580D752A763FD /* NSIndexPath+Testing.swift in Sources */,
+				7149F088D5405661B1713677 /* NSObject+KIFTestActorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +612,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -628,6 +654,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
