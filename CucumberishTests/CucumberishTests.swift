@@ -4,6 +4,7 @@ import Cucumberish
 class CucumberishTests: NSObject {
     override init() {
         super.init()
+        KIFEnableAccessibility()
         loadSteps()
         startTests(for:nil)
     }
@@ -11,7 +12,7 @@ class CucumberishTests: NSObject {
     func loadSteps() {
         beforeStart() {
             () -> Void in
-            StepDefinitions.setup();
+            StepDefinitions().setup();
         }
     }
 
