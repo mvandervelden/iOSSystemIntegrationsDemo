@@ -19,3 +19,4 @@ DerivedData
 .idea/
 fastlane/report.xml
 fastlane/output
+.ruby-version
