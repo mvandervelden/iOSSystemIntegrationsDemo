@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +13,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C01EA561D369F6400E0F279"
-               BuildableName = "MVImageViewer.app"
-               BlueprintName = "MVImageViewer"
+               BlueprintIdentifier = "0C01EA6C1D369F6400E0F279"
+               BuildableName = "MVImageViewerTests.xctest"
+               BlueprintName = "MVImageViewerTests"
                ReferencedContainer = "container:MVImageViewer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,16 +31,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C69C3811D6DA88000FD8BAD"
-               BuildableName = "CucumberishTests.xctest"
-               BlueprintName = "CucumberishTests"
-               ReferencedContainer = "container:MVImageViewer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "0C01EA6C1D369F6400E0F279"
                BuildableName = "MVImageViewerTests.xctest"
                BlueprintName = "MVImageViewerTests"
@@ -52,9 +41,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C01EA561D369F6400E0F279"
-            BuildableName = "MVImageViewer.app"
-            BlueprintName = "MVImageViewer"
+            BlueprintIdentifier = "0C01EA6C1D369F6400E0F279"
+            BuildableName = "MVImageViewerTests.xctest"
+            BlueprintName = "MVImageViewerTests"
             ReferencedContainer = "container:MVImageViewer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,16 +60,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C01EA561D369F6400E0F279"
-            BuildableName = "MVImageViewer.app"
-            BlueprintName = "MVImageViewer"
+            BlueprintIdentifier = "0C01EA6C1D369F6400E0F279"
+            BuildableName = "MVImageViewerTests.xctest"
+            BlueprintName = "MVImageViewerTests"
             ReferencedContainer = "container:MVImageViewer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,16 +78,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C01EA561D369F6400E0F279"
-            BuildableName = "MVImageViewer.app"
-            BlueprintName = "MVImageViewer"
+            BlueprintIdentifier = "0C01EA6C1D369F6400E0F279"
+            BuildableName = "MVImageViewerTests.xctest"
+            BlueprintName = "MVImageViewerTests"
             ReferencedContainer = "container:MVImageViewer.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
