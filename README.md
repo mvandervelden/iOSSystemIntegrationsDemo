@@ -1,7 +1,7 @@
 # MVImageViewer
 ### (formerly known as iOS System Integrations Demo)
 
-[![Build Status](https://travis-ci.org/mvandervelden/iOSSystemIntegrationsDemo.svg?branch=v2)](https://travis-ci.org/mvandervelden/iOSSystemIntegrationsDemo)
+[![Build Status](https://travis-ci.org/mvandervelden/iOSSystemIntegrationsDemo.svg?branch=develop)](https://travis-ci.org/mvandervelden/iOSSystemIntegrationsDemo)
 --------------
 
 ### What it demos
