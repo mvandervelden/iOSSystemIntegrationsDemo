@@ -8,8 +8,5 @@
 
 * Travis integration for iOS
 * Fastlane for build configuration management
+* Cucumberish & KIF for running BDD UI tests
 
-### What it will demo
-
-* Deep search into app (CoreSpotlight, NSUserActivity)
-* App extensions
