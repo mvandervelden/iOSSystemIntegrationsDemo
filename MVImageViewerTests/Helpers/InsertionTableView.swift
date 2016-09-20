@@ -3,9 +3,9 @@
 import UIKit
 
 class InsertionTableView : UITableView {
-    var insertedIndexPath : NSIndexPath?
+    var insertedIndexPath : IndexPath?
     
-    override func insertRowsAtIndexPaths(indexPaths: [NSIndexPath], withRowAnimation animation: UITableViewRowAnimation) {
+    override func insertRows(at indexPaths: [IndexPath], with animation: UITableViewRowAnimation) {
         insertedIndexPath = indexPaths.first
     }
 }

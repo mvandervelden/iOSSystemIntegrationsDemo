@@ -6,48 +6,48 @@ class StepDefinitions: NSObject {
 
         Given("I am on the master screen") {
             (args, userInfo) -> Void in
-            self.tester().waitForViewWithAccessibilityLabel("Table")
+            self.tester().waitForView(withAccessibilityLabel: "Table")
         }
 
         And("an item is available") {
             (args, userInfo) -> Void in
             let tableView = self.getTableView()
-            if tableView.cellForRowAtIndexPath(NSIndexPath.indexPathForFirstRow()) == nil {
+            if tableView.cellForRow(at: IndexPath.indexPathForFirstRow()) == nil {
                 self.tapButton(withLabel:"Add")
             }
         }
 
         When("I tap the (.*)? button") {
             (args, userInfo) -> Void in
-            self.tapButton(withLabel: args[0])
+            self.tapButton(withLabel: (args?[0])!)
         }
 
         When("I tap the item") {
             (args, userInfo) -> Void in
-            self.tester().tapRowAtIndexPath(NSIndexPath.indexPathForFirstRow(), inTableView: self.getTableView())
+            self.tester().tapRow(at: IndexPath.indexPathForFirstRow(), in: self.getTableView())
         }
 
         Then("an item is added") {
             (args, userInfo) -> Void in
-            self.tester().waitForCellAtIndexPath(NSIndexPath.indexPathForFirstRow(), inTableView: self.getTableView())
+            self.tester().waitForCell(at: IndexPath.indexPathForFirstRow(), in: self.getTableView())
         }
 
         Then("the detail screen is shown") {
             (args, userInfo) -> Void in
-            self.tester().waitForViewWithAccessibilityLabel("Detail")
+            self.tester().waitForView(withAccessibilityLabel: "Detail")
         }
     }
 
-    private func getTableView() -> UITableView {
-        return self.tester().waitForViewWithAccessibilityLabel("Table") as! UITableView
+    fileprivate func getTableView() -> UITableView {
+        return self.tester().waitForView(withAccessibilityLabel: "Table") as! UITableView
     }
 
-    private func tapButton(withLabel label: String) {
-        let buttonLabel = label.capitalizedString
-        self.tester().tapViewWithAccessibilityLabel(buttonLabel)
+    fileprivate func tapButton(withLabel label: String) {
+        let buttonLabel = label.capitalized
+        self.tester().tapView(withAccessibilityLabel: buttonLabel)
     }
 
-    private func tester(file: String = #file, _ line: Int = #line) -> KIFUITestActor {
+    fileprivate func tester(_ file: String = #file, _ line: Int = #line) -> KIFUITestActor {
         return KIFUITestActor(inFile: file, atLine: line, delegate: self)
     }
 }

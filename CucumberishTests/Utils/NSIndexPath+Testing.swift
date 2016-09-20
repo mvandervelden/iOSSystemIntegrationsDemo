@@ -2,8 +2,8 @@
 
 import UIKit
 
-extension NSIndexPath {
-    class func indexPathForFirstRow() -> NSIndexPath {
-        return NSIndexPath(forRow: 0, inSection: 0)
+extension IndexPath {
+    static func indexPathForFirstRow() -> IndexPath {
+        return IndexPath(row: 0, section: 0)
     }
 }
