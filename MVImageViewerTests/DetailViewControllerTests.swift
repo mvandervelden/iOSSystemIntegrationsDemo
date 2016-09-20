@@ -2,6 +2,13 @@ import Quick
 import Nimble
 @testable import MVImageViewer
 
+
+extension String : Detail {
+    func description() -> String {
+        return description
+    }
+}
+
 class DetailViewControllerSpec: QuickSpec {
     override func spec() {
         describe("detail view controller") {

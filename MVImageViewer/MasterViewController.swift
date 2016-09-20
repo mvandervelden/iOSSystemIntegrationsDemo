@@ -2,10 +2,16 @@
 
 import UIKit
 
+extension Date : Detail {
+    func description() -> String {
+        return description
+    }
+}
+
 class MasterViewController: UITableViewController {
     
     var detailViewController: DetailViewController? = nil
-    var objects = [AnyObject]()
+    var objects = [Detail]()
     
     
     override func viewDidLoad() {
@@ -28,7 +34,7 @@ class MasterViewController: UITableViewController {
     }
     
     func insertNewObject(_ sender: AnyObject) {
-        objects.insert(Date() as AnyObject, at: 0)
+        objects.insert(Date(), at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: .automatic)
     }
@@ -39,9 +45,9 @@ extension MasterViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[(indexPath as NSIndexPath).row] as! Date
+                let object = objects[(indexPath as NSIndexPath).row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object as AnyObject?
+                controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

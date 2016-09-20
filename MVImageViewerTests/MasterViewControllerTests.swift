@@ -33,7 +33,7 @@ class MasterViewControllerSpec : QuickSpec {
                     }
                     
                     it("adds an object the start of the table") {
-                        expect(tableView.insertedIndexPath).to(equal(NSIndexPath(forRow: 0, inSection: 0)))
+                        expect(tableView.insertedIndexPath).to(equal(IndexPath(row: 0, section: 0)))
                     }
                 }
             }

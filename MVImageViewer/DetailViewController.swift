@@ -2,11 +2,15 @@
 
 import UIKit
 
+protocol Detail {
+    func description() -> String
+}
+
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
-    var detailItem: AnyObject? {
+    var detailItem: Detail? {
         didSet {
             configureView()
         }
@@ -20,7 +24,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         if let label = detailDescriptionLabel {
             if let item = detailItem {
-                label.text = item.description
+                label.text = item.description()
             } else {
                 label.text = ""
             }
