@@ -21,6 +21,7 @@
 		0C69C38D1D6DB13500FD8BAD /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 0C69C38C1D6DB13500FD8BAD /* Features */; };
 		0CB4CD2A1D70279900DF55F1 /* CucumberishInitializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4CD291D70279900DF55F1 /* CucumberishInitializer.m */; };
 		0CB4CD2C1D702C2D00DF55F1 /* StepDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB4CD2B1D702C2D00DF55F1 /* StepDefinitions.swift */; };
+		62F481EAB6C1AF932F30520D /* Pods_MVImageViewerTests_CucumberishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE6376C840689B4C362215F /* Pods_MVImageViewerTests_CucumberishTests.framework */; };
 		7149F088D5405661B1713677 /* NSObject+KIFTestActorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F831ECB9C93F420A7B7A /* NSObject+KIFTestActorDelegate.swift */; };
 		7149F3AC8C4580D752A763FD /* NSIndexPath+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F8D22905622F66F82CBC /* NSIndexPath+Testing.swift */; };
 		7149F6EB966085D901A6728D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7149F281B2A502FF768C5B98 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		331172D76DC15BC67F7E7970 /* Pods_KIFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BDEC31FF44D7D4A309CF8A /* Pods_KIFCucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFCucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD08C8C66AA95BAD1059EC1 /* Pods_MVImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5090F2B00C7F1893F8B5F5E8 /* Pods-MVImageViewerTests-CucumberishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests-CucumberishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests-CucumberishTests/Pods-MVImageViewerTests-CucumberishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B402DB733F48D083CA071D7 /* Pods-MVImageViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests/Pods-MVImageViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7149F063F26B224517F97383 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		7149F1F16E8303F9155C0405 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
@@ -84,7 +86,9 @@
 		924A6DE05B2947405D2F2149 /* Pods_MVImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD35AC108BD754AF61990314 /* Pods-CucumberishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8C3CFD55A48D90E6619154 /* Pods_CucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68BF7CC606C8C8E6B3C711 /* Pods-MVImageViewerTests-CucumberishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests-CucumberishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests-CucumberishTests/Pods-MVImageViewerTests-CucumberishTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD5B995EC504883177B1D183 /* Pods-MVImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewer/Pods-MVImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE6376C840689B4C362215F /* Pods_MVImageViewerTests_CucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewerTests_CucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58465F7D81CDDA115007CD2 /* Pods-MVImageViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewer/Pods-MVImageViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03CD3F0A34230F4DDFE6B5F0 /* Pods_CucumberishTests.framework in Frameworks */,
+				62F481EAB6C1AF932F30520D /* Pods_MVImageViewerTests_CucumberishTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +189,7 @@
 				331172D76DC15BC67F7E7970 /* Pods_KIFTests.framework */,
 				2C379EE792489FFD1E2D5CFC /* Pods_KIFSwiftTests.framework */,
 				48BDEC31FF44D7D4A309CF8A /* Pods_KIFCucumberishTests.framework */,
+				EFE6376C840689B4C362215F /* Pods_MVImageViewerTests_CucumberishTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 				F58465F7D81CDDA115007CD2 /* Pods-MVImageViewer.release.xcconfig */,
 				5B402DB733F48D083CA071D7 /* Pods-MVImageViewerTests.debug.xcconfig */,
 				1E50EA51C25FFFB20EB01FB6 /* Pods-MVImageViewerTests.release.xcconfig */,
+				5090F2B00C7F1893F8B5F5E8 /* Pods-MVImageViewerTests-CucumberishTests.debug.xcconfig */,
+				CF68BF7CC606C8C8E6B3C711 /* Pods-MVImageViewerTests-CucumberishTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -440,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVImageViewerTests-CucumberishTests/Pods-MVImageViewerTests-CucumberishTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C862CF82282870B13AE4247 /* [CP] Check Pods Manifest.lock */ = {
@@ -484,7 +492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVImageViewerTests-CucumberishTests/Pods-MVImageViewerTests-CucumberishTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F39B1ECE17B7BBC102A667F4 /* [CP] Copy Pods Resources */ = {
@@ -618,6 +626,7 @@
 				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -659,6 +668,7 @@
 					"$(inherited)",
 				);
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -716,7 +726,7 @@
 		};
 		0C69C3891D6DA88000FD8BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD35AC108BD754AF61990314 /* Pods-CucumberishTests.debug.xcconfig */;
+			baseConfigurationReference = 5090F2B00C7F1893F8B5F5E8 /* Pods-MVImageViewerTests-CucumberishTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -733,7 +743,7 @@
 		};
 		0C69C38A1D6DA88000FD8BAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E05D0B2E57886DB4DD3ED89 /* Pods-CucumberishTests.release.xcconfig */;
+			baseConfigurationReference = CF68BF7CC606C8C8E6B3C711 /* Pods-MVImageViewerTests-CucumberishTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
