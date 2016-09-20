@@ -70,7 +70,6 @@
 		0CB4CD2B1D702C2D00DF55F1 /* StepDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDefinitions.swift; sourceTree = "<group>"; };
 		1E50EA51C25FFFB20EB01FB6 /* Pods-MVImageViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests/Pods-MVImageViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C379EE792489FFD1E2D5CFC /* Pods_KIFSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E05D0B2E57886DB4DD3ED89 /* Pods-CucumberishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests.release.xcconfig"; sourceTree = "<group>"; };
 		331172D76DC15BC67F7E7970 /* Pods_KIFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BDEC31FF44D7D4A309CF8A /* Pods_KIFCucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KIFCucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD08C8C66AA95BAD1059EC1 /* Pods_MVImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +83,6 @@
 		7149F8D22905622F66F82CBC /* NSIndexPath+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+Testing.swift"; sourceTree = "<group>"; };
 		7149FF8AFCEB0DCCAF8E6F08 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = file.yml; path = .travis.yml; sourceTree = SOURCE_ROOT; };
 		924A6DE05B2947405D2F2149 /* Pods_MVImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD35AC108BD754AF61990314 /* Pods-CucumberishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CucumberishTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CucumberishTests/Pods-CucumberishTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8C3CFD55A48D90E6619154 /* Pods_CucumberishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CucumberishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF68BF7CC606C8C8E6B3C711 /* Pods-MVImageViewerTests-CucumberishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewerTests-CucumberishTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewerTests-CucumberishTests/Pods-MVImageViewerTests-CucumberishTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD5B995EC504883177B1D183 /* Pods-MVImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVImageViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVImageViewer/Pods-MVImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,8 +226,6 @@
 		7D7AD15BDB318FB7B3267521 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD35AC108BD754AF61990314 /* Pods-CucumberishTests.debug.xcconfig */,
-				2E05D0B2E57886DB4DD3ED89 /* Pods-CucumberishTests.release.xcconfig */,
 				DD5B995EC504883177B1D183 /* Pods-MVImageViewer.debug.xcconfig */,
 				F58465F7D81CDDA115007CD2 /* Pods-MVImageViewer.release.xcconfig */,
 				5B402DB733F48D083CA071D7 /* Pods-MVImageViewerTests.debug.xcconfig */,
