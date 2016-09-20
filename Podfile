@@ -8,13 +8,14 @@ target 'MVImageViewer' do
   # Pods for MVImageViewer
   target 'MVImageViewerTests' do
     inherit! :search_paths
-      pod 'Quick', :git => 'https://github.com/Quick/Quick.git', :branch => 'swift-3.0'
-      pod 'Nimble', '~> 5.0'
-
-    target 'CucumberishTests' do
-      pod 'Cucumberish', :git => 'https://github.com/Ahmed-Ali/Cucumberish.git', :branch => 'develop'
-      pod 'KIF', '~> 3.5'
-      pod 'Nimble', '~> 5.0'
-    end
+    pod 'Quick', :git => 'https://github.com/Quick/Quick.git', :branch => 'swift-3.0'
+    pod 'Nimble', '~> 5.0'
+  end
+  
+  target 'CucumberishTests' do
+    inherit! :search_paths
+    pod 'Cucumberish', :git => 'https://github.com/Ahmed-Ali/Cucumberish.git', :branch => 'develop'
+    pod 'KIF', '~> 3.5'
+    pod 'Nimble', '~> 5.0'
   end
 end
